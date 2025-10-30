@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="meta.title">Auralis — защита просто</title>
+  <meta name="description" content="Auralis: лёгкая и быстрая защита данных" data-i18n="meta.description" />
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" opacity=".2"/><path d="M12 4l6.66 3.85v7.3L12 19l-6.66-3.85v-7.3z" fill="currentColor"/></svg>
+        <span>Auralis</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features" data-i18n="nav.features">Возможности</a>
+        <a href="#download" data-i18n="nav.download">Скачать</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="controls">
+        <div class="theme-switch">
+          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light theme">☀️</button>
+          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark theme">🌙</button>
+          <button class="btn theme-btn" data-theme="theme-cyber" aria-label="Cyber theme">🛡️</button>
+        </div>
+        <select id="langSelect" class="select">
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+          <option value="uk">UK</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container grid-2">
+        <div>
+          <h1 data-i18n="hero.title">Современная защита данных — просто и надёжно</h1>
+          <p class="muted" data-i18n="hero.subtitle">Интеллектуальный движок, мгновенные обновления и нулевой шум.</p>
+          <div class="cta">
+            <a href="#download" class="btn btn-primary" data-i18n="hero.ctaPrimary">Скачать бесплатно</a>
+            <a href="#features" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Посмотреть возможности</a>
+          </div>
+          <ul class="badges">
+            <li>⚡ <span data-i18n="badges.fast">Быстрая проверка</span></li>
+            <li>🧠 <span data-i18n="badges.smart">Умные сигнатуры</span></li>
+            <li>🔒 <span data-i18n="badges.privacy">Конфиденциальность</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="mock">
+            <div class="mock-top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <strong data-i18n="mock.title">Auralis Web UI</strong>
+            </div>
+            <div class="mock-body">
+              <div class="cards">
+                <div class="card">
+                  <div class="card-head">
+                    <span>🛡️</span>
+                    <h3 data-i18n="mock.cards.status">Статус защиты</h3>
+                  </div>
+                  <p class="muted" data-i18n="mock.cards.statusDesc">В реальном времени мониторинг процессов</p>
+                </div>
+                <div class="card">
+                  <div class="card-head">
+                    <span>🧪</span>
+                    <h3 data-i18n="mock.cards.scan">Проверка</h3>
+                  </div>
+                  <p class="muted" data-i18n="mock.cards.scanDesc">Быстрая и полная, по расписанию</p>
+                </div>
+                <div class="card">
+                  <div class="card-head">
+                    <span>📦</span>
+                    <h3 data-i18n="mock.cards.update">Обновления</h3>
+                  </div>
+                  <p class="muted" data-i18n="mock.cards.updateDesc">Сигнатуры и ядро без перезагрузки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <small class="note" data-i18n="hero.note">Демонстрационный интерфейс. Никаких скрытых установок.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 data-i18n="features.title">Что внутри</h2>
+        <div class="features grid-3">
+          <div class="feature">
+            <h3>🔍 <span data-i18n="features.items.0.title">Сканер</span></h3>
+            <p class="muted" data-i18n="features.items.0.desc">Проверка файлов и процессов с приоритизацией рисков.</p>
+          </div>
+          <div class="feature">
+            <h3>🌐 <span data-i18n="features.items.1.title">Веб‑щит</span></h3>
+            <p class="muted" data-i18n="features.items.1.desc">Фильтрация опасных ссылок и загрузок в браузере.</p>
+          </div>
+          <div class="feature">
+            <h3>🧩 <span data-i18n="features.items.2.title">Модули</span></h3>
+            <p class="muted" data-i18n="features.items.2.desc">Гибкие компоненты: от анти‑фишинга до контроля USB.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2 data-i18n="download.title">Скачать Auralis</h2>
+          <p class="muted" data-i18n="download.desc">Лёгкий установщик для Windows. Подпись и авто‑обновления.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#" data-i18n="download.ctaWin">Скачать для Windows</a>
+            <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Документация</a>
+          </div>
+          <ul class="list">
+            <li data-i18n="download.points.0">Без рекламы и телеметрии</li>
+            <li data-i18n="download.points.1">Авто‑обновления сигнатур</li>
+            <li data-i18n="download.points.2">Поддержка оффлайн‑сканирования</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="download.hashTitle">Контрольные суммы</h3>
+          <pre class="code">AuralisSetup.exe — SHA256:
+d41d8cd98f00b204e9800998ecf8427e</pre>
+          <p class="muted" data-i18n="download.hashNote">Замените на реальные значения перед публикацией.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary data-i18n="faq.q1">Это реальный антивирус?</summary>
+          <p class="muted" data-i18n="faq.a1">Это демонстрационный сайт интерфейса. Продукт и брендинг — пример.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q2">Будут ли мобильные приложения?</summary>
+          <p class="muted" data-i18n="faq.a2">Планы по iOS/Android в разработке. Следите за обновлениями.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q3">Как связаться с поддержкой?</summary>
+          <p class="muted" data-i18n="faq.a3">Напишите нам на support@auralis.example или через форму ниже.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2 data-i18n="contact.title">Связаться</h2>
+          <p class="muted" data-i18n="contact.desc">Оставьте сообщение — ответим в течение 24 часов.</p>
+          <form class="form" onsubmit="event.preventDefault(); alert('Спасибо!');">
+            <input type="text" placeholder="Имя" data-i18n-placeholder="contact.form.name">
+            <input type="email" placeholder="Email" data-i18n-placeholder="contact.form.email">
+            <textarea rows="4" placeholder="Сообщение" data-i18n-placeholder="contact.form.message"></textarea>
+            <button class="btn btn-primary" data-i18n="contact.form.send">Отправить</button>
+          </form>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="contact.altTitle">Другие каналы</h3>
+          <ul class="list">
+            <li>Telegram: @auralis</li>
+            <li>Email: support@auralis.example</li>
+            <li>GitHub: github.com/auralis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Auralis</p>
+      <a href="#" data-i18n="footer.privacy">Политика конфиденциальности</a>
+      <a href="#" data-i18n="footer.terms">Условия использования</a>
+    </div>
+  </footer>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

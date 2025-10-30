@@ -1,0 +1,266 @@
+{
+  "ru": {
+    "meta": {
+      "title": "Auralis — защита просто",
+      "description": "Auralis: лёгкая и быстрая защита данных"
+    },
+    "nav": {
+      "features": "Возможности",
+      "download": "Скачать",
+      "faq": "FAQ",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "title": "Современная защита данных — просто и надёжно",
+      "subtitle": "Интеллектуальный движок, мгновенные обновления и нулевой шум.",
+      "ctaPrimary": "Скачать бесплатно",
+      "ctaSecondary": "Посмотреть возможности",
+      "note": "Демонстрационный интерфейс. Никаких скрытых установок."
+    },
+    "badges": {
+      "fast": "Быстрая проверка",
+      "smart": "Умные сигнатуры",
+      "privacy": "Конфиденциальность"
+    },
+    "mock": {
+      "title": "Auralis Web UI",
+      "cards": {
+        "status": "Статус защиты",
+        "statusDesc": "В реальном времени мониторинг процессов",
+        "scan": "Проверка",
+        "scanDesc": "Быстрая и полная, по расписанию",
+        "update": "Обновления",
+        "updateDesc": "Сигнатуры и ядро без перезагрузки"
+      }
+    },
+    "features": {
+      "title": "Что внутри",
+      "items": [
+        {
+          "title": "Сканер",
+          "desc": "Проверка файлов и процессов с приоритизацией рисков."
+        },
+        {
+          "title": "Веб‑щит",
+          "desc": "Фильтрация опасных ссылок и загрузок в браузере."
+        },
+        {
+          "title": "Модули",
+          "desc": "Гибкие компоненты: от анти‑фишинга до контроля USB."
+        }
+      ]
+    },
+    "download": {
+      "title": "Скачать Auralis",
+      "desc": "Лёгкий установщик для Windows. Подпись и авто‑обновления.",
+      "ctaWin": "Скачать для Windows",
+      "ctaDocs": "Документация",
+      "points": [
+        "Без рекламы и телеметрии",
+        "Авто‑обновления сигнатур",
+        "Поддержка оффлайн‑сканирования"
+      ],
+      "hashTitle": "Контрольные суммы",
+      "hashNote": "Замените на реальные значения перед публикацией."
+    },
+    "faq": {
+      "q1": "Это реальный антивирус?",
+      "a1": "Это демонстрационный сайт интерфейса. Продукт и брендинг — пример.",
+      "q2": "Будут ли мобильные приложения?",
+      "a2": "Планы по iOS/Android в разработке. Следите за обновлениями.",
+      "q3": "Как связаться с поддержкой?",
+      "a3": "Напишите нам на support@auralis.example или через форму ниже."
+    },
+    "contact": {
+      "title": "Связаться",
+      "desc": "Оставьте сообщение — ответим в течение 24 часов.",
+      "form": {
+        "name": "Имя",
+        "email": "Email",
+        "message": "Сообщение",
+        "send": "Отправить"
+      },
+      "altTitle": "Другие каналы"
+    },
+    "footer": {
+      "privacy": "Политика конфиденциальности",
+      "terms": "Условия использования"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Auralis — simple protection",
+      "description": "Auralis: lightweight, fast data protection"
+    },
+    "nav": {
+      "features": "Features",
+      "download": "Download",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Modern protection — simple & reliable",
+      "subtitle": "Smart engine, instant updates, zero noise.",
+      "ctaPrimary": "Download free",
+      "ctaSecondary": "See features",
+      "note": "Demo interface. No hidden installs."
+    },
+    "badges": {
+      "fast": "Fast scan",
+      "smart": "Smart signatures",
+      "privacy": "Privacy‑first"
+    },
+    "mock": {
+      "title": "Auralis Web UI",
+      "cards": {
+        "status": "Protection status",
+        "statusDesc": "Realtime process monitoring",
+        "scan": "Scan",
+        "scanDesc": "Quick & full, on schedule",
+        "update": "Updates",
+        "updateDesc": "Signatures & core without reboot"
+      }
+    },
+    "features": {
+      "title": "What’s inside",
+      "items": [
+        {
+          "title": "Scanner",
+          "desc": "File & process checks with risk prioritization."
+        },
+        {
+          "title": "Web Shield",
+          "desc": "Block dangerous links & downloads in the browser."
+        },
+        {
+          "title": "Modules",
+          "desc": "Flexible components from anti‑phishing to USB control."
+        }
+      ]
+    },
+    "download": {
+      "title": "Download Auralis",
+      "desc": "Lightweight Windows installer. Signed with auto‑updates.",
+      "ctaWin": "Download for Windows",
+      "ctaDocs": "Documentation",
+      "points": [
+        "No ads or telemetry",
+        "Automatic signature updates",
+        "Offline scan support"
+      ],
+      "hashTitle": "Checksums",
+      "hashNote": "Replace with real values before publishing."
+    },
+    "faq": {
+      "q1": "Is this a real antivirus?",
+      "a1": "This is a demo site of the interface. Product & branding are examples.",
+      "q2": "Will there be mobile apps?",
+      "a2": "iOS/Android plans are in progress. Stay tuned.",
+      "q3": "How do I contact support?",
+      "a3": "Email support@auralis.example or use the form below."
+    },
+    "contact": {
+      "title": "Contact",
+      "desc": "Leave a message — we’ll reply within 24 hours.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+      },
+      "altTitle": "Other channels"
+    },
+    "footer": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  },
+  "uk": {
+    "meta": {
+      "title": "Auralis — захист просто",
+      "description": "Auralis: легкий і швидкий захист даних"
+    },
+    "nav": {
+      "features": "Можливості",
+      "download": "Завантажити",
+      "faq": "FAQ",
+      "contact": "Контакти"
+    },
+    "hero": {
+      "title": "Сучасний захист — просто й надійно",
+      "subtitle": "Розумний рушій, миттєві оновлення та нульовий шум.",
+      "ctaPrimary": "Завантажити безкоштовно",
+      "ctaSecondary": "Переглянути можливості",
+      "note": "Демонстраційний інтерфейс. Жодних прихованих інсталяцій."
+    },
+    "badges": {
+      "fast": "Швидка перевірка",
+      "smart": "Розумні сигнатури",
+      "privacy": "Конфіденційність"
+    },
+    "mock": {
+      "title": "Auralis Web UI",
+      "cards": {
+        "status": "Статус захисту",
+        "statusDesc": "Моніторинг процесів у реальному часі",
+        "scan": "Перевірка",
+        "scanDesc": "Швидка і повна, за розкладом",
+        "update": "Оновлення",
+        "updateDesc": "Сигнатури та ядро без перезавантаження"
+      }
+    },
+    "features": {
+      "title": "Що всередині",
+      "items": [
+        {
+          "title": "Сканер",
+          "desc": "Перевірка файлів і процесів з пріоритизацією ризиків."
+        },
+        {
+          "title": "Веб‑щит",
+          "desc": "Блокування небезпечних посилань і завантажень у браузері."
+        },
+        {
+          "title": "Модулі",
+          "desc": "Гнучкі компоненти: від антифішингу до контролю USB."
+        }
+      ]
+    },
+    "download": {
+      "title": "Завантажити Auralis",
+      "desc": "Легкий інсталятор для Windows. Підпис і автооновлення.",
+      "ctaWin": "Завантажити для Windows",
+      "ctaDocs": "Документація",
+      "points": [
+        "Без реклами та телеметрії",
+        "Автооновлення сигнатур",
+        "Підтримка офлайн‑сканування"
+      ],
+      "hashTitle": "Контрольні суми",
+      "hashNote": "Замініть на реальні значення перед публікацією."
+    },
+    "faq": {
+      "q1": "Це справжній антивірус?",
+      "a1": "Це демонстраційний сайт інтерфейсу. Продукт і брендинг — приклад.",
+      "q2": "Чи будуть мобільні застосунки?",
+      "a2": "Плани щодо iOS/Android у процесі. Слідкуйте за новинами.",
+      "q3": "Як зв’язатися з підтримкою?",
+      "a3": "Напишіть на support@auralis.example або скористайтеся формою нижче."
+    },
+    "contact": {
+      "title": "Зв’язатися",
+      "desc": "Залиште повідомлення — відповімо протягом 24 годин.",
+      "form": {
+        "name": "Ім’я",
+        "email": "Email",
+        "message": "Повідомлення",
+        "send": "Надіслати"
+      },
+      "altTitle": "Інші канали"
+    },
+    "footer": {
+      "privacy": "Політика конфіденційності",
+      "terms": "Умови користування"
+    }
+  }
+}
