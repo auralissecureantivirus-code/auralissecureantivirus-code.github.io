@@ -18,14 +18,18 @@
       <nav class="nav-links">
         <a href="#features" data-i18n="nav.features">Возможности</a>
         <a href="#download" data-i18n="nav.download">Скачать</a>
-        <a href="#faq" data-i18n="nav.faq">FAQ</a>
-        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+        <a href="#settings" data-i18n="nav.settings">Настройки</a>
       </nav>
       <div class="controls">
+        <!-- Расширенные темы -->
         <div class="theme-switch">
-          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light theme">☀️</button>
-          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark theme">🌙</button>
-          <button class="btn theme-btn" data-theme="theme-cyber" aria-label="Cyber theme">🛡️</button>
+          <button class="btn theme-btn" data-theme="theme-system" aria-label="System">💠</button>
+          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark">🌙</button>
+          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light">☀️</button>
+          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green">🟢</button>
+          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue">🔵</button>
+          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet">🟣</button>
+          <button class="btn theme-btn" data-theme="theme-yellow" aria-label="Yellow">🟡</button>
         </div>
         <select id="langSelect" class="select">
           <option value="ru">RU</option>
@@ -37,13 +41,14 @@
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero section">
       <div class="container grid-2">
         <div>
           <h1 data-i18n="hero.title">Современная защита данных — просто и надёжно</h1>
           <p class="muted" data-i18n="hero.subtitle">Интеллектуальный движок, мгновенные обновления и нулевой шум.</p>
           <div class="cta">
-            <a href="#download" class="btn btn-primary" data-i18n="hero.ctaPrimary">Скачать бесплатно</a>
+            <a href="#download" class="btn btn-primary glow" data-i18n="hero.ctaPrimary">Скачать бесплатно</a>
             <a href="#features" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Посмотреть возможности</a>
           </div>
           <ul class="badges">
@@ -52,7 +57,9 @@
             <li>🔒 <span data-i18n="badges.privacy">Конфиденциальность</span></li>
           </ul>
         </div>
+
         <div>
+          <!-- мини-мок интерфейса -->
           <div class="mock">
             <div class="mock-top">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -84,14 +91,29 @@
               </div>
             </div>
           </div>
+
+          <!-- пульсирующий щит -->
+          <div class="pulse-wrap">
+            <div class="pulse-shield">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 4l24 14v28L32 60 8 46V18z" class="shield-outer"/>
+                <path d="M32 12l16 9.3v18.6L32 49 16 39V20.3z" class="shield-inner"/>
+                <path d="M26  thirtyl4 4 8-8" class="shield-check"/>
+              </svg>
+              <span class="pulse-dot"></span>
+            </div>
+          </div>
+
           <small class="note" data-i18n="hero.note">Демонстрационный интерфейс. Никаких скрытых установок.</small>
         </div>
       </div>
     </section>
 
+    <!-- FEATURES -->
     <section id="features" class="section">
       <div class="container">
         <h2 data-i18n="features.title">Что внутри</h2>
+
         <div class="features grid-3">
           <div class="feature">
             <h3>🔍 <span data-i18n="features.items.0.title">Сканер</span></h3>
@@ -107,45 +129,63 @@
           </div>
         </div>
 
-        <!-- 🔰 Добавленные карточки из Google Sites -->
+        <!-- 3 карточки как на твоём скрине -->
         <div class="grid-3 features-auralis">
           <article class="card feature-card">
             <div class="feature-img" aria-hidden="true">🛡️</div>
             <h3 data-i18n="features.cards.0.title">Защита данных 24/7</h3>
             <a class="feature-link" href="#" data-i18n="features.cards.0.link">Защита данных 24/7»</a>
-            <p class="muted" data-i18n="features.cards.0.desc">
-              Наша система блокирует вирусы ещё до того, как они попадут в ваш ПК.
-            </p>
+            <p class="muted" data-i18n="features.cards.0.desc">Наша система блокирует вирусы ещё до того, как они попадут в ваш ПК.</p>
           </article>
 
           <article class="card feature-card">
             <div class="feature-img" aria-hidden="true">🚨</div>
             <h3 data-i18n="features.cards.1.title">Мгновенное обнаружение угроз</h3>
             <a class="feature-link" href="#" data-i18n="features.cards.1.link">Мгновенное обнаружение угроз</a>
-            <p class="muted" data-i18n="features.cards.1.desc">
-              Регулярные обновления базы угроз — защита даже от новых вирусов
-            </p>
+            <p class="muted" data-i18n="features.cards.1.desc">Регулярные обновления базы угроз — защита даже от новых вирусов</p>
           </article>
 
           <article class="card feature-card">
             <div class="feature-img" aria-hidden="true">💻✔️</div>
             <h3 data-i18n="features.cards.2.title">Минимальная нагрузка на систему</h3>
             <a class="feature-link" href="#" data-i18n="features.cards.2.link">Минимальная нагрузка на систему</a>
-            <p class="muted" data-i18n="features.cards.2.desc">
-              Работает незаметно, не замедляя ваш компьютер.
-            </p>
+            <p class="muted" data-i18n="features.cards.2.desc">Работает незаметно, не замедляя ваш компьютер.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- SETTINGS (показывать IP) -->
+    <section id="settings" class="section">
+      <div class="container">
+        <h2 data-i18n="settings.title">Персонализация</h2>
+
+        <div class="pref panel ip-toggle">
+          <span data-i18n="settings.showIp">Показывать IP</span>
+          <label class="switch">
+            <input id="showIpToggle" type="checkbox">
+            <span></span>
+          </label>
+        </div>
+
+        <div class="panel ip-panel" id="ipPanel" hidden>
+          <div class="ip-title" data-i18n="settings.ipTitle">Ваш IP</div>
+          <div class="ip-value" id="ipValue">—</div>
+          <small class="muted" data-i18n="settings.ipNote">Данные грузятся только при включении переключателя.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
     <section id="download" class="section alt">
       <div class="container grid-2">
         <div>
-          <h2 data-i18n="download.title">Скачать Auralis</h2>
+          <h2 data-i18n="download.title">Скачать Auralis
+            <span class="tag" id="releaseTag">release 1.3.0</span>
+          </h2>
           <p class="muted" data-i18n="download.desc">Лёгкий установщик для Windows. Подпись и авто-обновления.</p>
           <div class="cta">
-            <a class="btn btn-primary" href="#" data-i18n="download.ctaWin">Скачать для Windows</a>
+            <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-i18n="download.ctaWin">Скачать для Windows</a>
             <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Документация</a>
           </div>
           <ul class="list">
@@ -162,24 +202,6 @@ d41d8cd98f00b204e9800998ecf8427e</pre>
         </div>
       </div>
     </section>
-
-    <section id="faq" class="section">
-      <div class="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary data-i18n="faq.q1">Это реальный антивирус?</summary>
-          <p class="muted" data-i18n="faq.a1">Это демонстрационный сайт интерфейса. Продукт и брендинг — пример.</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q2">Будут ли мобильные приложения?</summary>
-          <p class="muted" data-i18n="faq.a2">Планы по iOS/Android в разработке. Следите за обновлениями.</p>
-        </details>
-        <details>
-          <summary data-i18n="faq.q3">Как связаться с поддержкой?</summary>
-          <p class="muted" data-i18n="faq.a3">Напишите нам на <b>auralissecureantivirus@gmail.com</b></p>
-        </details>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -187,6 +209,8 @@ d41d8cd98f00b204e9800998ecf8427e</pre>
       <p>© <span id="year"></span> Auralis</p>
       <a href="#" data-i18n="footer.privacy">Политика конфиденциальности</a>
       <a href="#" data-i18n="footer.terms">Условия использования</a>
+      <span>•</span>
+      <a href="mailto:auralissecureantivirus@gmail.com">auralissecureantivirus@gmail.com</a>
     </div>
   </footer>
 
