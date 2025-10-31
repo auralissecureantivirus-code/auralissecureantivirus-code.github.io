@@ -1,59 +1,110 @@
-/* i18n + theming + small UX bits */
-const $ = (sel, root=document) => root.querySelector(sel);
-const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+/* ====== Утилиты ====== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
-const supportedLangs = ["ru","en","uk"];
-const defaultLang = (localStorage.getItem("lang") || (navigator.language||"ru").slice(0,2)).toLowerCase();
-const initialLang = supportedLangs.includes(defaultLang) ? defaultLang : "ru";
+let locales = {};
+const supportedLangs = ["ru", "en", "uk"];
+let lang = (localStorage.getItem("lang") || (navigator.language || "ru").slice(0, 2)).toLowerCase();
+if (!supportedLangs.includes(lang)) lang = "ru";
 
 const savedTheme = localStorage.getItem("theme") || "theme-dark";
-document.body.classList.remove("theme-light","theme-dark","theme-cyber");
-document.body.classList.add(savedTheme);
 
-/** i18n */
-let locales = {};
-async function loadLocales() {
-  const res = await fetch("locales.json");
-  locales = await res.json();
-  applyI18n(initialLang);
-  $("#langSelect").value = initialLang;
-}
+/* ====== Инициализация ====== */
+document.addEventListener("DOMContentLoaded", () => {
+  $("#year").textContent = new Date().getFullYear();
 
-function applyI18n(lang){
-  const dict = locales[lang] || {};
-  $$("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    const value = getByPath(dict, key) ?? el.textContent;
-    if (value) el.textContent = value;
-  });
-  $$("[data-i18n-placeholder]").forEach(el => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    const value = getByPath(dict, key) ?? el.placeholder;
-    if (value) el.placeholder = value;
-  });
-  document.documentElement.lang = lang;
-  localStorage.setItem("lang", lang);
-}
+  initTheme(savedTheme);
+  loadLocales();
 
-function getByPath(obj, path){
-  return path.split(".").reduce((o,k)=> (o&&o[k]!==undefined)?o[k]:undefined, obj);
-}
+  // переключатели тем
+  $$(".theme-btn").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.theme)));
 
-/** theme switching */
-$$(".theme-btn").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    const theme = btn.dataset.theme;
-    document.body.classList.remove("theme-light","theme-dark","theme-cyber");
-    document.body.classList.add(theme);
-    localStorage.setItem("theme", theme);
-  });
+  // язык
+  $("#langSelect")?.addEventListener("change", e => applyI18n(e.target.value));
+
+  // IP переключатель
+  const ipToggle = $("#showIpToggle");
+  const ipPanel = $("#ipPanel");
+  const ipValue = $("#ipValue");
+  const ipPref = localStorage.getItem("show_ip") === "1";
+
+  if (ipToggle) {
+    ipToggle.checked = ipPref;
+    ipPanel.hidden = !ipPref;
+    if (ipPref) fetchIp();
+    ipToggle.addEventListener("change", () => {
+      const on = ipToggle.checked;
+      localStorage.setItem("show_ip", on ? "1" : "0");
+      ipPanel.hidden = !on;
+      if (on) fetchIp();
+    });
+  }
 });
 
-/** language select */
-$("#langSelect").addEventListener("change", (e)=> applyI18n(e.target.value));
+/* ====== Локализация ====== */
+async function loadLocales() {
+  try {
+    const res = await fetch("locales.json");
+    locales = await res.json();
+    applyI18n(lang);
+    const sel = $("#langSelect");
+    if (sel) sel.value = lang;
+  } catch (err) {
+    console.warn("Не удалось загрузить локали:", err);
+  }
+}
 
-/** small runtime */
-$("#year").textContent = new Date().getFullYear().toString();
+function applyI18n(l) {
+  const dict = locales[l] || {};
+  $$("[data-i18n]").forEach(el => {
+    const k = el.getAttribute("data-i18n");
+    const v = k.split(".").reduce((o, k2) => o && o[k2], dict);
+    if (v) el.textContent = v;
+  });
+  $$("[data-i18n-placeholder]").forEach(el => {
+    const k = el.getAttribute("data-i18n-placeholder");
+    const v = k.split(".").reduce((o, k2) => o && o[k2], dict);
+    if (v) el.placeholder = v;
+  });
+  document.documentElement.lang = l;
+  localStorage.setItem("lang", l);
+  lang = l;
+}
 
-/** boot */
-loadLocales();
+/* ====== Темы ====== */
+function initTheme(theme) {
+  setTheme(theme);
+  if (theme === "theme-system") {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    mq.onchange = () => applySystemTheme();
+  }
+}
+
+function applySystemTheme() {
+  document.body.classList.remove("theme-light", "theme-dark", "theme-green", "theme-blue", "theme-violet", "theme-yellow");
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  document.body.classList.add(mq.matches ? "theme-dark" : "theme-light");
+}
+
+function setTheme(theme) {
+  document.body.classList.remove("theme-light", "theme-dark", "theme-green", "theme-blue", "theme-violet", "theme-yellow", "theme-system");
+  if (theme === "theme-system") {
+    applySystemTheme();
+  } else {
+    document.body.classList.add(theme);
+  }
+  localStorage.setItem("theme", theme);
+}
+
+/* ====== IP ====== */
+async function fetchIp() {
+  try {
+    const ipValue = $("#ipValue");
+    ipValue.textContent = "…";
+    const r = await fetch("https://api.ipify.org?format=json");
+    const j = await r.json();
+    ipValue.textContent = j.ip || "неизвестно";
+  } catch (e) {
+    $("#ipValue").textContent = "недоступно";
+  }
+}
