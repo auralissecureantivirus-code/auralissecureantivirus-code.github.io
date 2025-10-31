@@ -307,4 +307,72 @@ a:hover {
   --brand: #ffd34d;
   --brand-2: #ffb800;
   --outline: rgba(255,211,77,.18);
+/* === Rhythm & typography === */
+:root{
+  --container: 1200px;
+  --space-1: 6px;  --space-2: 10px; --space-3: 16px;
+  --space-4: 24px; --space-5: 36px; --space-6: 56px;
 }
+.container{max-width:var(--container)}
+.section{padding:var(--space-6) 0}
+h1{font-size:clamp(28px, 4vw, 42px); line-height:1.15; letter-spacing:.2px}
+h2{font-size:clamp(22px, 3vw, 28px); margin-bottom:var(--space-4)}
+.muted{color:var(--muted)}
+
+/* === Cleaner cards & elevation === */
+.card{
+  border-radius:20px;
+  border:1px solid color-mix(in oklab, var(--outline) 90%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 92%, transparent), var(--panel));
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
+.card:hover{transform:translateY(-3px); box-shadow:0 12px 36px rgba(0,0,0,.3)}
+
+/* === Hero background (чуть «дороже») === */
+.hero{
+  background:
+    radial-gradient(900px 500px at 15% -10%, color-mix(in oklab, var(--brand) 12%, transparent), transparent 60%),
+    radial-gradient(800px 400px at 85% 10%, color-mix(in oklab, var(--brand-2) 12%, transparent), transparent 60%);
+}
+
+/* === CTA кнопки посолиднее === */
+.btn-primary{
+  background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--brand) 28%, transparent);
+}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:2px solid color-mix(in oklab, var(--brand) 60%, transparent); outline-offset:2px}
+
+/* === Feature (три карточки) — картинка-плашка «как на скрине» === */
+.features-auralis .feature-img{
+  background: linear-gradient(180deg, #0f1c33, #0a1426);
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.features-auralis .feature-card{padding:18px}
+
+/* === Разделители между секциями === */
+.section + .section{position:relative}
+.section + .section:before{
+  content:""; position:absolute; left:0; right:0; top:-1px; height:1px;
+  background:linear-gradient(90deg, transparent, var(--outline), transparent);
+}
+
+/* === Download панель (чуть ярче) === */
+.section.alt .panel{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 90%, transparent), var(--panel));
+  border:1px dashed color-mix(in oklab, var(--outline) 80%, transparent);
+}
+#releaseTag{background: color-mix(in oklab, var(--brand) 20%, transparent)}
+
+/* === Footer polish === */
+.site-footer{
+  border-top:1px solid var(--outline);
+  background:linear-gradient(180deg, transparent, color-mix(in oklab, var(--panel) 70%, transparent));
+}
+
+/* === Reveal on scroll === */
+.reveal{opacity:0; transform:translateY(12px); transition:.6s ease}
+.reveal.show{opacity:1; transform:none}
+
