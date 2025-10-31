@@ -99,4 +99,30 @@ body{
   .cards{grid-template-columns:1fr}
   .features.grid-3{grid-template-columns:1fr}
   .nav-links{display:none}
+/* 3 feature cards (like screenshot) */
+.features-auralis .feature-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
 }
+.feature-img{
+  height: 180px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel-2), transparent);
+  border: 1px solid var(--outline);
+  display: grid;
+  place-items: center;
+  font-size: 64px;
+  opacity: .9;
+}
+.feature-link{
+  color: color-mix(in oklab, var(--brand) 80%, var(--text));
+  text-decoration: none;
+  font-weight: 600;
+}
+.feature-link:hover{ text-decoration: underline; }
+.features-auralis h3{
+  font-size: 1.6rem;
+  margin: 0;
+}
+
