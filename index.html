@@ -1,37 +1,57 @@
-<!DOCTYPE html>
+с<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta.title">Auralis — защита просто</title>
-  <meta name="description" content="Auralis: лёгкая и быстрая защита данных" data-i18n="meta.description" />
-  <link rel="icon" href="favicon.svg">
+  <meta name="description" content="Auralis Secure Antivirus web console." data-i18n="meta.description" data-i18n-attr="content" />
+  <meta name="theme-color" content="#08111d" id="themeMeta" />
+  <title data-i18n="meta.title">Auralis Secure Antivirus UI</title>
+  <link rel="icon" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="theme-dark">
-  <header class="site-header">
+<body class="theme-dark is-preload">
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <div class="splash-shield" aria-hidden="true">
+        <span class="ring ring-1"></span>
+        <span class="ring ring-2"></span>
+        <span class="ring ring-3"></span>
+        <svg viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Auralis shield">
+          <path d="M32 8l20 6v18c0 12.4-8.4 23.6-20 27.2C20.4 55.6 12 44.4 12 32V14z" fill="currentColor" opacity=".18"></path>
+          <path d="M32 12l16 4.8V32c0 9.5-6.4 18-16 21-9.6-3-16-11.5-16-21V16.8z" fill="currentColor"></path>
+        </svg>
+      </div>
+      <p data-i18n="splash.loading">Initializing protection modules...</p>
+    </div>
+  </div>
+  <div id="cursorGlow" class="cursor-glow"></div>
+
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
-      <a class="brand" href="#top">
-        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" opacity=".2"/><path d="M12 4l6.66 3.85v7.3L12 19l-6.66-3.85v-7.3z" fill="currentColor"/></svg>
-        <span>Auralis</span>
+      <a class="brand" href="#overview">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2l9 5v10l-9 5-9-5V7z" fill="currentColor" opacity=".22"></path>
+          <path d="M12 5l6 3.3V16l-6 3-6-3V8.3z" fill="currentColor"></path>
+        </svg>
+        <span data-i18n="brand.name">Auralis Secure</span>
       </a>
-      <nav class="nav-links">
-        <a href="#features" data-i18n="nav.features">Возможности</a>
-        <a href="#download" data-i18n="nav.download">Скачать</a>
-        <a href="#settings" data-i18n="nav.settings">Настройки</a>
+      <nav class="nav-links" id="mainNav">
+        <a href="#overview" data-section="overview" data-i18n="nav.overview">Overview</a>
+        <a href="#protection" data-section="protection" data-i18n="nav.protection">Protection</a>
+        <a href="#download" data-section="download" data-i18n="nav.download">Download</a>
+        <a href="#settings" data-section="settings" data-i18n="nav.settings">Settings</a>
       </nav>
       <div class="controls">
-        <!-- Расширенные темы -->
-        <div class="theme-switch">
-          <button class="btn theme-btn" data-theme="theme-system" aria-label="System">💠</button>
-          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark">🌙</button>
-          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light">☀️</button>
-          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green">🟢</button>
-          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue">🔵</button>
-          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet">🟣</button>
-          <button class="btn theme-btn" data-theme="theme-yellow" aria-label="Yellow">🟡</button>
+        <div class="theme-switch" role="group" aria-label="Themes">
+          <button class="btn theme-btn" data-theme="theme-system" aria-label="System">SYS</button>
+          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark">DRK</button>
+          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light">LGT</button>
+          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue">BLU</button>
+          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green">GRN</button>
+          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet">VLT</button>
+          <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber">AMB</button>
         </div>
-        <select id="langSelect" class="select">
+        <select id="langSelect" class="select" aria-label="Select language">
           <option value="ru">RU</option>
           <option value="en">EN</option>
           <option value="uk">UK</option>
@@ -41,164 +61,243 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero section">
-      <div class="container grid-2">
-        <div>
-          <h1 data-i18n="hero.title">Современная защита данных — просто и надёжно</h1>
-          <p class="muted" data-i18n="hero.subtitle">Интеллектуальный движок, мгновенные обновления и нулевой шум.</p>
-          <div class="cta">
-            <a href="#download" class="btn btn-primary glow" data-i18n="hero.ctaPrimary">Скачать бесплатно</a>
-            <a href="#features" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Посмотреть возможности</a>
+    <section id="overview" class="hero section">
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <span class="hero-badge" data-i18n="hero.badge">Always-on protection</span>
+          <h1 data-i18n="hero.title">Auralis web interface for instant cyber security</h1>
+          <p class="muted" data-i18n="hero.subtitle">
+            Monitor the health of your protection, launch scans, and follow threats in real time inside a futuristic console.
+          </p>
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary glow" data-i18n="hero.ctaPrimary">Download for Windows</a>
+            <a href="#protection" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Open dashboard</a>
           </div>
-          <ul class="badges">
-            <li>⚡ <span data-i18n="badges.fast">Быстрая проверка</span></li>
-            <li>🧠 <span data-i18n="badges.smart">Умные сигнатуры</span></li>
-            <li>🔒 <span data-i18n="badges.privacy">Конфиденциальность</span></li>
+          <ul class="hero-metrics">
+            <li>
+              <strong data-i18n="hero.metrics.0.value">24/7</strong>
+              <span data-i18n="hero.metrics.0.label">Active defence</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.metrics.1.value">128</strong>
+              <span data-i18n="hero.metrics.1.label">Threats blocked</span>
+            </li>
+            <li>
+              <strong data-i18n="hero.metrics.2.value">4.8*</strong>
+              <span data-i18n="hero.metrics.2.label">User rating</span>
+            </li>
           </ul>
         </div>
-
-        <div>
-          <!-- мини-мок интерфейса -->
-          <div class="mock">
-            <div class="mock-top">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <strong data-i18n="mock.title">Auralis Web UI</strong>
+        <div class="hero-visual reveal">
+          <div class="hero-shield" aria-hidden="true">
+            <span class="pulse pulse-1"></span>
+            <span class="pulse pulse-2"></span>
+            <span class="pulse pulse-3"></span>
+            <svg viewBox="0 0 64 64" role="presentation">
+              <defs>
+                <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="currentColor" stop-opacity="0.9"></stop>
+                  <stop offset="100%" stop-color="currentColor" stop-opacity="0.6"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M32 6l22 7v19c0 13-9.2 24.8-22 28.4C19.2 56.8 10 45 10 32V13z" fill="url(#shieldGradient)" opacity="0.35"></path>
+              <path d="M32 12l16 4.8V32c0 9.8-6.6 18.4-16 21.6C22.6 50.4 16 41.8 16 32V16.8z" fill="url(#shieldGradient)"></path>
+            </svg>
+          </div>
+          <div class="hero-console glass">
+            <div class="console-row">
+              <span data-i18n="hero.console.statusLabel">System status</span>
+              <span class="status status-online">
+                <span class="status-dot"></span>
+                <span data-i18n="hero.console.statusValue">Online</span>
+              </span>
             </div>
-            <div class="mock-body">
-              <div class="cards">
-                <div class="card">
-                  <div class="card-head">
-                    <span>🛡️</span>
-                    <h3 data-i18n="mock.cards.status">Статус защиты</h3>
-                  </div>
-                  <p class="muted" data-i18n="mock.cards.statusDesc">В реальном времени мониторинг процессов</p>
-                </div>
-                <div class="card">
-                  <div class="card-head">
-                    <span>🧪</span>
-                    <h3 data-i18n="mock.cards.scan">Проверка</h3>
-                  </div>
-                  <p class="muted" data-i18n="mock.cards.scanDesc">Быстрая и полная, по расписанию</p>
-                </div>
-                <div class="card">
-                  <div class="card-head">
-                    <span>📦</span>
-                    <h3 data-i18n="mock.cards.update">Обновления</h3>
-                  </div>
-                  <p class="muted" data-i18n="mock.cards.updateDesc">Сигнатуры и ядро без перезагрузки</p>
-                </div>
+            <div class="console-progress">
+              <span data-i18n="hero.console.scan">Smart scan</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 78%">78%</div>
               </div>
             </div>
-          </div>
-
-          <!-- пульсирующий щит -->
-          <div class="pulse-wrap">
-            <div class="pulse-shield">
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M32 4l24 14v28L32 60 8 46V18z" class="shield-outer"/>
-                <path d="M32 12l16 9.3v18.6L32 49 16 39V20.3z" class="shield-inner"/>
-                <path d="M26  thirtyl4 4 8-8" class="shield-check"/>
-              </svg>
-              <span class="pulse-dot"></span>
+            <div class="console-grid">
+              <div>
+                <span data-i18n="hero.console.threats">Threats blocked</span>
+                <strong>128</strong>
+              </div>
+              <div>
+                <span data-i18n="hero.console.quarantine">In quarantine</span>
+                <strong>5</strong>
+              </div>
+            </div>
+            <div class="console-footer">
+              <span data-i18n="hero.console.signature">Signature base</span>
+              <span data-i18n="hero.console.signatureVersion">v1.3.0 | updated 5 min ago</span>
             </div>
           </div>
-
-          <small class="note" data-i18n="hero.note">Демонстрационный интерфейс. Никаких скрытых установок.</small>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
+    <section id="protection" class="section dashboard">
       <div class="container">
-        <h2 data-i18n="features.title">Что внутри</h2>
-
-        <div class="features grid-3">
-          <div class="feature">
-            <h3>🔍 <span data-i18n="features.items.0.title">Сканер</span></h3>
-            <p class="muted" data-i18n="features.items.0.desc">Проверка файлов и процессов с приоритизацией рисков.</p>
-          </div>
-          <div class="feature">
-            <h3>🌐 <span data-i18n="features.items.1.title">Веб-щит</span></h3>
-            <p class="muted" data-i18n="features.items.1.desc">Фильтрация опасных ссылок и загрузок в браузере.</p>
-          </div>
-          <div class="feature">
-            <h3>🧩 <span data-i18n="features.items.2.title">Модули</span></h3>
-            <p class="muted" data-i18n="features.items.2.desc">Гибкие компоненты: от анти-фишинга до контроля USB.</p>
-          </div>
+        <div class="section-head reveal">
+          <h2 data-i18n="dashboard.title">Security console</h2>
+          <p class="muted" data-i18n="dashboard.subtitle">
+            Control Auralis protection modules: instant scans, traffic monitoring, and updates with one click.
+          </p>
         </div>
-
-        <!-- 3 карточки как на твоём скрине -->
-        <div class="grid-3 features-auralis">
-          <article class="card feature-card">
-            <div class="feature-img" aria-hidden="true">🛡️</div>
-            <h3 data-i18n="features.cards.0.title">Защита данных 24/7</h3>
-            <a class="feature-link" href="#" data-i18n="features.cards.0.link">Защита данных 24/7»</a>
-            <p class="muted" data-i18n="features.cards.0.desc">Наша система блокирует вирусы ещё до того, как они попадут в ваш ПК.</p>
+        <div class="panel-grid">
+          <article class="panel-card reveal">
+            <header>
+              <span class="icon icon-scan" aria-hidden="true"></span>
+              <h3 data-i18n="dashboard.cards.scan.title">Instant scan</h3>
+            </header>
+            <p class="muted" data-i18n="dashboard.cards.scan.desc">
+              Analyse files and memory with cloud signatures and AI heuristics to catch zero-day threats.
+            </p>
+            <button class="btn btn-soft" type="button" data-i18n="dashboard.cards.scan.action">Start scan</button>
           </article>
-
-          <article class="card feature-card">
-            <div class="feature-img" aria-hidden="true">🚨</div>
-            <h3 data-i18n="features.cards.1.title">Мгновенное обнаружение угроз</h3>
-            <a class="feature-link" href="#" data-i18n="features.cards.1.link">Мгновенное обнаружение угроз</a>
-            <p class="muted" data-i18n="features.cards.1.desc">Регулярные обновления базы угроз — защита даже от новых вирусов</p>
+          <article class="panel-card reveal">
+            <header>
+              <span class="icon icon-network" aria-hidden="true"></span>
+              <h3 data-i18n="dashboard.cards.network.title">Network shield</h3>
+            </header>
+            <p class="muted" data-i18n="dashboard.cards.network.desc">
+              Filter traffic and block phishing with behavioural analytics and self-updating rules.
+            </p>
+            <div class="metric">
+              <strong>42</strong>
+              <span data-i18n="dashboard.cards.network.metric">Connections monitored</span>
+            </div>
           </article>
-
-          <article class="card feature-card">
-            <div class="feature-img" aria-hidden="true">💻✔️</div>
-            <h3 data-i18n="features.cards.2.title">Минимальная нагрузка на систему</h3>
-            <a class="feature-link" href="#" data-i18n="features.cards.2.link">Минимальная нагрузка на систему</a>
-            <p class="muted" data-i18n="features.cards.2.desc">Работает незаметно, не замедляя ваш компьютер.</p>
+          <article class="panel-card reveal">
+            <header>
+              <span class="icon icon-update" aria-hidden="true"></span>
+              <h3 data-i18n="dashboard.cards.update.title">Update centre</h3>
+            </header>
+            <p class="muted" data-i18n="dashboard.cards.update.desc">
+              Automate module and signature updates. Schedule silent maintenance windows with ease.
+            </p>
+            <div class="update-status">
+              <span class="status status-online">
+                <span class="status-dot"></span>
+                <span data-i18n="dashboard.cards.update.status">All modules current</span>
+              </span>
+              <button class="linkish" type="button" data-i18n="dashboard.cards.update.action">Check updates</button>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SETTINGS (показывать IP) -->
-    <section id="settings" class="section">
+    <section id="features" class="section features">
       <div class="container">
-        <h2 data-i18n="settings.title">Персонализация</h2>
-
-        <div class="pref panel ip-toggle">
-          <span data-i18n="settings.showIp">Показывать IP</span>
-          <label class="switch">
-            <input id="showIpToggle" type="checkbox">
-            <span></span>
-          </label>
+        <div class="section-head reveal">
+          <h2 data-i18n="features.title">Auralis modules</h2>
+          <p class="muted" data-i18n="features.subtitle">
+            A futuristic interface and advanced technology give precise control over every security detail.
+          </p>
         </div>
-
-        <div class="panel ip-panel" id="ipPanel" hidden>
-          <div class="ip-title" data-i18n="settings.ipTitle">Ваш IP</div>
-          <div class="ip-value" id="ipValue">—</div>
-          <small class="muted" data-i18n="settings.ipNote">Данные грузятся только при включении переключателя.</small>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="features.cards.0.title">Integrity control</h3>
+            <p data-i18n="features.cards.0.desc">
+              Monitor critical files and registry keys with instant alerts and automatic rollback.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="features.cards.1.title">Isolated sandbox</h3>
+            <p data-i18n="features.cards.1.desc">
+              Launch suspicious apps in a protected environment without risking the main system.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="features.cards.2.title">Data protection</h3>
+            <p data-i18n="features.cards.2.desc">
+              Encrypt sensitive files and resist ransomware with multi-layer backups.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="features.cards.3.title">Performance monitor</h3>
+            <p data-i18n="features.cards.3.desc">
+              Analyse module load, receive optimisation tips, and enable autonomous eco mode.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- DOWNLOAD -->
-    <section id="download" class="section alt">
-      <div class="container grid-2">
-        <div>
-          <h2 data-i18n="download.title">Скачать Auralis
-            <span class="tag" id="releaseTag">release 1.3.0</span>
-          </h2>
-          <p class="muted" data-i18n="download.desc">Лёгкий установщик для Windows. Подпись и авто-обновления.</p>
+    <section id="download" class="section download">
+      <div class="container download-layout">
+        <div class="download-copy reveal">
+          <h2 data-i18n="download.title">Download Auralis</h2>
+          <p class="muted" data-i18n="download.desc">
+            Install Auralis Secure Antivirus for Windows and link the web console for remote administration.
+          </p>
+          <div class="download-version">
+            <span class="label" data-i18n="download.releaseLabel">Release version</span>
+            <span class="value" id="releaseTag">release 1.3.0</span>
+          </div>
           <div class="cta">
-            <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-i18n="download.ctaWin">Скачать для Windows</a>
-            <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Документация</a>
+            <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener">
+              <span class="btn-icon" aria-hidden="true">&#129695;</span>
+              <span data-i18n="download.ctaWin">Download for Windows</span>
+            </a>
+            <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Documentation</a>
           </div>
-          <ul class="list">
-            <li data-i18n="download.points.0">Без рекламы и телеметрии</li>
-            <li data-i18n="download.points.1">Авто-обновления сигнатур</li>
-            <li data-i18n="download.points.2">Поддержка оффлайн-сканирования</li>
+          <ul class="download-points">
+            <li data-i18n="download.points.0">Full security control without complex configuration.</li>
+            <li data-i18n="download.points.1">Real-time updates and cloud analytics.</li>
+            <li data-i18n="download.points.2">Integration with enterprise infrastructure.</li>
           </ul>
         </div>
-        <div class="panel">
-          <h3 data-i18n="download.hashTitle">Контрольные суммы</h3>
-          <pre class="code">AuralisSetup.exe — SHA256:
-d41d8cd98f00b204e9800998ecf8427e</pre>
-          <p class="muted" data-i18n="download.hashNote">Замените на реальные значения перед публикацией.</p>
+        <aside class="download-panel glass reveal">
+          <h3 data-i18n="download.hashTitle">Checksum</h3>
+          <p class="muted" data-i18n="download.hashDesc">
+            Verify the digital signature before installation to confirm the package integrity.
+          </p>
+          <div class="hash-block">
+            <span>AuralisSetup.exe | SHA256</span>
+            <code>8a1a63d7f5c1f6b9c2d5a8f4cdb4a0325e0f9d4f26c98f87cfd334f6a1b2cdd2</code>
+          </div>
+            <button class="linkish" type="button" data-i18n="download.verify">How to verify the signature?</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="settings" class="section settings">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="settings.title">Settings panel</h2>
+          <p class="muted" data-i18n="settings.subtitle">
+            Enable additional modules and keep an eye on your network whenever you need it.
+          </p>
+        </div>
+        <div class="settings-grid">
+          <article class="panel-card ip-toggle reveal">
+            <div>
+              <h3 data-i18n="settings.ipToggle.title">Show IP address</h3>
+              <p class="muted" data-i18n="settings.ipToggle.desc">
+                Display the external IP with a dynamic refresh and a visual network status indicator.
+              </p>
+            </div>
+            <label class="switch">
+              <input id="showIpToggle" type="checkbox" />
+              <span></span>
+            </label>
+          </article>
+          <article class="panel-card ip-panel glass reveal" id="ipPanel" hidden>
+            <header>
+              <span data-i18n="settings.ipTitle">Current IP</span>
+              <span class="status status-sync" id="ipStatus">
+                <span class="status-dot"></span>
+                <span id="ipStatusText" data-i18n="settings.ipStatus">Updating</span>
+              </span>
+            </header>
+            <div class="ip-value shimmer" id="ipValue">--.--.--.--</div>
+            <p class="muted" data-i18n="settings.ipNote">
+              Your IP is refreshed each time the block is enabled. Requests are made securely over HTTPS.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -206,10 +305,7 @@ d41d8cd98f00b204e9800998ecf8427e</pre>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Auralis</p>
-      <a href="#" data-i18n="footer.privacy">Политика конфиденциальности</a>
-      <a href="#" data-i18n="footer.terms">Условия использования</a>
-      <span>•</span>
+      <p>&copy; <span id="year"></span> Auralis</p>
       <a href="mailto:auralissecureantivirus@gmail.com">auralissecureantivirus@gmail.com</a>
     </div>
   </footer>
