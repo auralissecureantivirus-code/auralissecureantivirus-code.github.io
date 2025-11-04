@@ -25,13 +25,43 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(900px 600px at 12% -10%, color-mix(in oklab, var(--accent) 14%, transparent) 0%, transparent 70%),
-    radial-gradient(700px 500px at 90% 0%, color-mix(in oklab, var(--accent-2) 12%, transparent) 0%, transparent 70%);
-  opacity: 0.75;
+  inset: -18% -24%;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201600%20900'%20preserveAspectRatio%3D'xMidYMid%20slice'%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D'g'%20x1%3D'0%25'%20y1%3D'50%25'%20x2%3D'100%25'%20y2%3D'50%25'%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D'0%25'%20stop-color%3D'%2324d5ff'%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D'45%25'%20stop-color%3D'%237c5aff'%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D'100%25'%20stop-color%3D'%23ff52be'%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D'blur'%20x%3D'-20%25'%20y%3D'-20%25'%20width%3D'140%25'%20height%3D'140%25'%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D'18'%20result%3D'blur'%2F%3E%0A%20%20%20%20%20%20%3CfeMerge%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D'blur'%2F%3E%0A%20%20%20%20%20%20%20%20%3CfeMergeNode%20in%3D'SourceGraphic'%2F%3E%0A%20%20%20%20%20%20%3C%2FfeMerge%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D'M0%20560%20Q%20230%20420%20400%20480%20T%20800%20520%20T%201200%20460%20T%201600%20520%20L%201600%20900%20L%200%20900%20Z'%20fill%3D'url(%23g)'%20opacity%3D'0.35'%2F%3E%0A%20%20%3Cpath%20d%3D'M0%20520%20C%20220%20360%20520%20660%20800%20500%20C%201080%20340%201320%20640%201600%20460'%20stroke%3D'url(%23g)'%20stroke-width%3D'16'%20fill%3D'none'%20filter%3D'url(%23blur)'%2F%3E%0A%20%20%3Cpath%20d%3D'M0%20560%20C%20220%20400%20520%20680%20800%20520%20C%201080%20360%201320%20660%201600%20480'%20stroke%3D'url(%23g)'%20stroke-width%3D'8'%20fill%3D'none'%20opacity%3D'0.75'%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-size: 160% 140%;
+  background-position: center;
+  opacity: 0.85;
   pointer-events: none;
   transition: opacity 0.5s ease;
+  z-index: -3;
+  animation: wave-pan 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1100px 680px at 12% -10%, color-mix(in oklab, var(--accent) 20%, transparent) 0%, transparent 75%),
+    radial-gradient(900px 620px at 88% -6%, color-mix(in oklab, var(--accent-2) 18%, transparent) 0%, transparent 78%),
+    radial-gradient(1200px 720px at 50% 110%, color-mix(in oklab, #ff64c7 16%, transparent) 0%, transparent 70%),
+    radial-gradient(1px 1px at 0 0, rgba(255, 255, 255, 0.08), transparent 70%);
+  background-size:
+    140% 140%,
+    120% 120%,
+    160% 160%,
+    28px 28px;
+  background-position:
+    center,
+    center,
+    center,
+    0 0;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  z-index: -4;
+  animation: wave-drift 36s linear infinite;
 }
 
 body.is-preload {
@@ -42,6 +72,35 @@ body.is-preload {
 
 body.theme-transition {
   transition: background 0.45s ease, color 0.45s ease;
+}
+
+@keyframes wave-pan {
+  0% {
+    transform: translate3d(-2%, -1.5%, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-1%, 2.2%, 0) scale(1.04);
+  }
+}
+
+@keyframes wave-drift {
+  0% {
+    background-position:
+      center,
+      center,
+      center,
+      0 0;
+  }
+  100% {
+    background-position:
+      48% 44%,
+      52% 46%,
+      50% 40%,
+      140px 90px;
+  }
 }
 
 *,
@@ -513,6 +572,13 @@ a:focus-visible {
   letter-spacing: 0.08em;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.progress-bar-alt {
+  background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 40%, #23c7ff 35%), color-mix(in oklab, var(--accent-2) 55%, #ff70d2 20%));
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 14px;
 }
 
 .console-grid {
