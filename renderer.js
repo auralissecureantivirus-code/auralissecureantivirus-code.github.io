@@ -12,7 +12,7 @@ const THEME_META = {
   "theme-amber": "#1c1202",
   "theme-system": ""
 };
-const RELEASE_VERSION = "1.3.0";
+const RELEASE_VERSION = "1.4.0";
 const RELEASE_LABEL_PREFIX = "release ";
 const MEGA_FOLDER_URL = "https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q";
 const MEGA_PROXY_URL = "https://r.jina.ai/https://mega.nz/folder/bEsXXKAa%23HMylvXhNvKVMD-bn9eGv-Q";
@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCursorGlow();
   initIpPanel();
   initUpdateChecker();
+  initBrowserMonitor();
+  initMailLink();
 
   window.addEventListener("load", () => {
     window.requestAnimationFrame(() => {
@@ -397,6 +399,126 @@ function initCursorGlow() {
     },
     { passive: true }
   );
+}
+
+function initBrowserMonitor() {
+  const fpsEl = $("#monitorFps");
+  const memoryEl = $("#monitorMemory");
+  const networkEl = $("#monitorNetwork");
+  const networkUnitEl = $("#monitorNetworkUnit");
+
+  if (!fpsEl || !memoryEl || !networkEl || !networkUnitEl) {
+    return;
+  }
+
+  let frames = 0;
+  let lastTimestamp = performance.now();
+  let lastUpdate = performance.now();
+
+  function loop(now) {
+    frames += 1;
+    if (now - lastUpdate >= 1000) {
+      const fps = Math.max(1, Math.round((frames * 1000) / (now - lastUpdate)));
+      fpsEl.textContent = Number.isFinite(fps) ? String(fps) : "--";
+      frames = 0;
+      lastUpdate = now;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+
+  function updateMemory() {
+    const perfMemory = performance.memory;
+    if (perfMemory && typeof perfMemory.usedJSHeapSize === "number") {
+      const usedMb = perfMemory.usedJSHeapSize / (1024 * 1024);
+      memoryEl.textContent = usedMb >= 10 ? usedMb.toFixed(0) : usedMb.toFixed(1);
+      return;
+    }
+    if (navigator.deviceMemory && typeof navigator.deviceMemory === "number") {
+      const approxMb = navigator.deviceMemory * 1024;
+      memoryEl.textContent = approxMb.toFixed(0);
+      return;
+    }
+    memoryEl.textContent = translate("hero.console.monitorUnavailable", "--");
+  }
+
+  function updateNetwork() {
+    const fallbackOnline = translate("hero.console.networkFallback", "online");
+    const offlineLabel = translate("hero.console.networkOffline", "offline");
+    const unitMs = translate("hero.console.networkUnit", "ms");
+    const unitMbps = translate("hero.console.networkUnitAlt", "Mbps");
+
+    if (!navigator.onLine) {
+      networkEl.textContent = "--";
+      networkUnitEl.textContent = offlineLabel;
+      networkUnitEl.dataset.state = "offline";
+      return;
+    }
+
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    networkUnitEl.dataset.state = "online";
+    if (connection && typeof connection.rtt === "number" && connection.rtt > 0) {
+      networkEl.textContent = String(Math.round(connection.rtt));
+      networkUnitEl.textContent = unitMs;
+      return;
+    }
+    if (connection && typeof connection.downlink === "number" && connection.downlink > 0) {
+      networkEl.textContent = connection.downlink.toFixed(1);
+      networkUnitEl.textContent = unitMbps;
+      return;
+    }
+    networkEl.textContent = fallbackOnline;
+    networkUnitEl.textContent = "";
+  }
+
+  updateMemory();
+  updateNetwork();
+
+  setInterval(updateMemory, 3000);
+  setInterval(updateNetwork, 3000);
+
+  window.addEventListener("online", updateNetwork);
+  window.addEventListener("offline", updateNetwork);
+
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (connection && typeof connection.addEventListener === "function") {
+    connection.addEventListener("change", updateNetwork, { passive: true });
+  }
+}
+
+function initMailLink() {
+  const mailLink = $("#mailLink");
+  if (!mailLink) return;
+
+  mailLink.addEventListener("click", () => {
+    const address = mailLink.dataset.mail || mailLink.textContent.trim();
+    if (!address) return;
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(address).catch(() => {});
+    }
+
+    const existingToast = document.querySelector(".mail-toast");
+    if (existingToast) {
+      existingToast.remove();
+    }
+
+    const toast = document.createElement("div");
+    toast.className = "mail-toast";
+    toast.textContent = formatTemplate(
+      translate("footer.mailToast", "Email: {mail}"),
+      { mail: address }
+    );
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add("visible"));
+    setTimeout(() => {
+      toast.classList.remove("visible");
+      setTimeout(() => {
+        toast.remove();
+      }, 400);
+    }, 2600);
+  });
 }
 
 function initIpPanel() {
