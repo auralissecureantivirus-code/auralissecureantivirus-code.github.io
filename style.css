@@ -560,6 +560,58 @@ a:focus-visible {
   border: 1px solid color-mix(in oklab, var(--accent) 14%, transparent);
 }
 
+.console-monitor {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 18px 0 18px;
+}
+
+.monitor-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--panel) 86%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 10%, transparent);
+}
+
+.monitor-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color-mix(in oklab, var(--muted) 80%, var(--text) 20%);
+}
+
+.monitor-value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.monitor-value strong {
+  font-size: 1.4rem;
+}
+
+.monitor-value .unit {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+#monitorNetworkUnit[data-state="offline"] {
+  color: #ff9b9b;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 1;
+}
+
+#monitorNetworkUnit[data-state="online"] {
+  color: color-mix(in oklab, var(--accent) 50%, #ffffff 10%);
+}
+
 .progress-bar {
   height: 100%;
   border-radius: inherit;
@@ -1037,6 +1089,26 @@ a:focus-visible {
   color: var(--muted);
 }
 
+.mail-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: rgba(12, 28, 48, 0.92);
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(6, 18, 32, 0.45);
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 120;
+  letter-spacing: 0.02em;
+}
+
+.mail-toast.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
 /* Cursor glow */
 .cursor-glow {
   position: fixed;
@@ -1240,8 +1312,24 @@ body.theme-amber {
     padding: 22px;
   }
 
+  .console-monitor {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .mail-toast {
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 460px) {
+  .console-monitor {
+    grid-template-columns: 1fr;
   }
 }
