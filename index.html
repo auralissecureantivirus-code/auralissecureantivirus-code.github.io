@@ -112,22 +112,33 @@
                 <span data-i18n="hero.console.statusValue">Online</span>
               </span>
             </div>
-            <div class="console-progress">
-              <span data-i18n="hero.console.scan">Smart monitoring</span>
-              <div class="progress">
-                <div class="progress-bar" style="width: 78%">78%</div>
+            <div class="console-monitor" id="browserMonitor">
+              <div class="monitor-item">
+                <span class="monitor-label" data-i18n="hero.console.fps">Frame refresh</span>
+                <div class="monitor-value">
+                  <strong id="monitorFps">--</strong>
+                  <span class="unit" data-i18n="hero.console.fpsUnit">fps</span>
+                </div>
               </div>
-            </div>
-            <div class="console-progress">
-              <span data-i18n="hero.console.basicMonitor">Basic monitoring</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-alt" style="width: 56%" data-i18n="hero.console.basicMonitorStatus">Normal</div>
+              <div class="monitor-item">
+                <span class="monitor-label" data-i18n="hero.console.memory">JS heap</span>
+                <div class="monitor-value">
+                  <strong id="monitorMemory">--</strong>
+                  <span class="unit" data-i18n="hero.console.memoryUnit">MB</span>
+                </div>
+              </div>
+              <div class="monitor-item">
+                <span class="monitor-label" data-i18n="hero.console.network">Network latency</span>
+                <div class="monitor-value">
+                  <strong id="monitorNetwork">--</strong>
+                  <span class="unit" id="monitorNetworkUnit" data-i18n="hero.console.networkUnit">ms</span>
+                </div>
               </div>
             </div>
             <div class="console-grid">
               <div>
                 <span data-i18n="hero.console.threats">Threats blocked</span>
-                <strong>128</strong>
+                <strong>+100</strong>
               </div>
               <div>
                 <span data-i18n="hero.console.quarantine">In quarantine</span>
@@ -136,7 +147,7 @@
             </div>
             <div class="console-footer">
               <span data-i18n="hero.console.signature">Signature base</span>
-              <span data-i18n="hero.console.signatureVersion">v1.3.0 | updated 5 min ago</span>
+              <span data-i18n="hero.console.signatureVersion">v1.4.0 | updated 5 min ago</span>
             </div>
           </div>
         </div>
@@ -181,14 +192,13 @@
               <h3 data-i18n="dashboard.cards.update.title">Update centre</h3>
             </header>
             <p class="muted" data-i18n="dashboard.cards.update.desc">
-              Automate module and signature updates. Schedule silent maintenance windows with ease.
+              Check for updates inside the antivirus and refresh signature packs instantly to stay ahead.
             </p>
             <div class="update-status">
               <span class="status status-online">
                 <span class="status-dot"></span>
                 <span data-i18n="dashboard.cards.update.status">All modules current</span>
               </span>
-              <button class="linkish" type="button" data-i18n="dashboard.cards.update.action">Check updates</button>
             </div>
           </article>
         </div>
@@ -239,14 +249,14 @@
           <p class="muted" data-i18n="download.desc">
             Install Auralis Secure Antivirus for Windows and link the web console for remote administration.
           </p>
-          <div class="download-version">
-            <span class="label" data-i18n="download.releaseLabel">Release version</span>
-            <span class="value" id="releaseTag">release 1.3.0</span>
-          </div>
-          <div class="cta">
-            <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener">
-              <span class="btn-icon" aria-hidden="true">&#129695;</span>
-              <span data-i18n="download.ctaWin">Download for Windows</span>
+        <div class="download-version">
+          <span class="label" data-i18n="download.releaseLabel">Release version</span>
+          <span class="value" id="releaseTag">release 1.4.0</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener">
+            <span class="btn-icon" aria-hidden="true">&#129695;</span>
+            <span data-i18n="download.ctaWin">Download for Windows</span>
             </a>
             <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Documentation</a>
           </div>
@@ -256,17 +266,6 @@
             <li data-i18n="download.points.2">Integration with enterprise infrastructure.</li>
           </ul>
         </div>
-        <aside class="download-panel glass reveal">
-          <h3 data-i18n="download.hashTitle">Checksum</h3>
-          <p class="muted" data-i18n="download.hashDesc">
-            Verify the digital signature before installation to confirm the package integrity.
-          </p>
-          <div class="hash-block">
-            <span>AuralisSetup.exe | SHA256</span>
-            <code>8a1a63d7f5c1f6b9c2d5a8f4cdb4a0325e0f9d4f26c98f87cfd334f6a1b2cdd2</code>
-          </div>
-            <button class="linkish" type="button" data-i18n="download.verify">How to verify the signature?</button>
-        </aside>
       </div>
     </section>
 
@@ -312,7 +311,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Auralis</p>
-      <a href="mailto:auralissecureantivirus@gmail.com">auralissecureantivirus@gmail.com</a>
+      <a href="mailto:auralissecureantivirus@gmail.com" id="mailLink" data-mail="auralissecureantivirus@gmail.com">auralissecureantivirus@gmail.com</a>
     </div>
   </footer>
 
