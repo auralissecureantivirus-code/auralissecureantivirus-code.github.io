@@ -76,6 +76,14 @@
           <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber" data-testid="theme-amber-button">🟠</button>
         </div>
 
+        <button id="soundToggle" class="btn sound-btn" type="button" aria-label="Sound" data-testid="sound-toggle-button" aria-pressed="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M11 5 6 9H3v6h3l5 4V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M15.5 8.5a4 4 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M18.5 6a7 7 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.75"></path>
+          </svg>
+        </button>
+
         <select id="langSelect" class="select" aria-label="Select language" data-testid="language-select">
           <option value="ru">RU</option>
           <option value="en">EN</option>
@@ -179,17 +187,19 @@
             <div class="console-grid" data-testid="console-grid">
               <div>
                 <span data-i18n="hero.console.threats" data-testid="console-threats-label">Threats blocked</span>
-                <strong data-testid="console-threats-value">+100</strong>
+                <strong data-testid="console-threats-value">100+</strong>
               </div>
               <div>
-                <span data-i18n="hero.console.quarantine" data-testid="console-quarantine-label">In quarantine</span>
-                <strong data-testid="console-quarantine-value">5</strong>
+                <span data-i18n="hero.console.securityScore" data-testid="console-score-label">Security Score</span>
+                <strong id="securityScoreValue" data-testid="console-score-value">92</strong>
               </div>
             </div>
 
             <div class="console-footer" data-testid="console-footer">
-              <span data-i18n="hero.console.signature" data-testid="console-signature-label">Signature base</span>
-              <span data-i18n="hero.console.signatureVersion" data-testid="console-signature-value">v1.5.0 | updated 5 min ago</span>
+              <div class="score-bar" data-testid="console-score-bar" aria-hidden="true">
+                <span id="securityScoreFill" class="score-fill"></span>
+              </div>
+              <span class="muted" data-i18n="hero.console.securityScoreHint" data-testid="console-score-hint">0–100 score based on today’s state.</span>
             </div>
           </div>
         </div>
