@@ -1202,33 +1202,35 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.05em;
-  height: 1.05em;
-  font-weight: 800;
-  color: var(--text);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px color-mix(in oklab, var(--accent) 45%, transparent));
 }
 
 .brand-x::before,
 .brand-x::after {
   content: "";
   position: absolute;
-  inset: 15%;
-  border-radius: 6px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-  opacity: 0.95;
-  mix-blend-mode: screen;
+  left: -10%;
+  right: -10%;
+  top: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--accent) 55%, transparent);
+  opacity: 0.55;
 }
 
 .brand-x::before {
-  transform: rotate(45deg);
+  transform: translateY(-50%) rotate(38deg);
 }
 
 .brand-x::after {
-  transform: rotate(-45deg);
-}
-
-.brand-x {
-  color: transparent;
+  transform: translateY(-50%) rotate(-38deg);
 }
 
 .splash-brand {
