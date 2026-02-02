@@ -927,6 +927,27 @@ a:focus-visible {
   margin: 0;
 }
 
+/* Security Score (hero console) */
+.score-bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--panel) 82%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 10%, transparent);
+  overflow: hidden;
+}
+
+.score-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 88%, #ffffff 12%), color-mix(in oklab, var(--accent-2) 86%, #ffffff 14%));
+  box-shadow: 0 0 18px color-mix(in oklab, var(--accent) 24%, transparent);
+  transition: width 0.8s ease;
+}
+
+
 /* Download */
 .download-layout {
   display: grid;
