@@ -101,11 +101,22 @@
           <ul class="hero-metrics" data-testid="hero-metrics">
             <li>
               <strong data-i18n="hero.metrics.0.value" data-testid="hero-metric-0-value">24/7</strong>
-              <span class="metric-label"><span class="metric-icon" aria-hidden="true">⏱</span><span data-i18n="hero.metrics.0.label" data-testid="hero-metric-0-label">Active defence</span></span>
+              <span class="metric-label"><span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" role="presentation">
+                  <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 22a9 9 0 1 0-9-9 9 9 0 0 0 9 9Z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                  <path d="M9 2h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+              </span><span data-i18n="hero.metrics.0.label" data-testid="hero-metric-0-label">Active defence</span></span>
             </li>
             <li>
               <strong id="heroThreatCounter" data-target="100" data-duration="650" data-suffix="+" data-i18n="hero.metrics.1.value" data-testid="hero-metric-1-value">0+</strong>
-              <span class="metric-label"><span class="metric-icon" aria-hidden="true">🛡</span><span data-i18n="hero.metrics.1.label" data-testid="hero-metric-1-label">Threats blocked</span></span>
+              <span class="metric-label"><span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" role="presentation">
+                  <path d="M12 2 20 5v7c0 5-3.4 9.6-8 11-4.6-1.4-8-6-8-11V5l8-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                  <path d="M9 12l2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span><span data-i18n="hero.metrics.1.label" data-testid="hero-metric-1-label">Threats blocked</span></span>
             </li>
             <li>
               <strong data-i18n="hero.metrics.2.value" data-testid="hero-metric-2-value">4.8*</strong>
