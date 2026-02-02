@@ -476,6 +476,8 @@
         "networkUnitAlt": "Мбіт/с",
         "networkOffline": "офлайн",
         "networkFallback": "онлайн",
+        "securityScore": "Оцінка системи",
+        "securityScoreHint": "0–100 на основі стану на сьогодні.",
         "monitorUnavailable": "--"
       }
     },
