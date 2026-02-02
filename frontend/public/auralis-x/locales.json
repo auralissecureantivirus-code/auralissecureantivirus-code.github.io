@@ -313,14 +313,14 @@
           "title": "Alpha",
           "status": "Experimental",
           "desc": "Experimental features. Unstable channel.",
-          "cta": "Join testing",
+          "cta": "Download",
           "warning": "Alpha builds may contain breaking changes. Use on a test machine."
         },
         "beta": {
           "title": "Beta",
           "status": "Testing",
           "desc": "Pre-release testing before rollout.",
-          "cta": "Join testing",
+          "cta": "Download",
           "warning": "Beta is more stable than Alpha, but issues may still happen."
         },
         "stable": {
