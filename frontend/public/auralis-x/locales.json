@@ -266,6 +266,8 @@
         "networkUnitAlt": "Mbps",
         "networkOffline": "offline",
         "networkFallback": "online",
+        "securityScore": "Security Score",
+        "securityScoreHint": "0–100 based on today's status.",
         "monitorUnavailable": "--"
       }
     },
