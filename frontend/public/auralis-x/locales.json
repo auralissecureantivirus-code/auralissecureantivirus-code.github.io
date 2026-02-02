@@ -450,7 +450,7 @@
         "threats": "Загроз заблоковано",
         "quarantine": "У карантині",
         "signature": "База підписів",
-        "signatureVersion": "v1.4.0 | оновлено 5 хвилин тому",
+        "signatureVersion": "v1.5.0 | оновлено 5 хвилин тому",
         "fps": "Частота оновлення",
         "fpsUnit": "fps",
         "memory": "JS-памʼять",
