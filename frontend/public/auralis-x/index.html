@@ -1,57 +1,82 @@
-с<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Auralis Secure Antivirus web console." data-i18n="meta.description" data-i18n-attr="content" />
+  <meta name="description" content="Auralis X web console." data-i18n="meta.description" data-i18n-attr="content" />
   <meta name="theme-color" content="#08111d" id="themeMeta" />
-  <title data-i18n="meta.title">Auralis Antivirus</title>
+  <title data-i18n="meta.title">Auralis X</title>
   <link rel="icon" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="theme-dark is-preload">
-  <div id="splash" class="splash">
+  <div id="splash" class="splash" data-testid="splash-screen">
     <div class="splash-inner">
       <div class="splash-shield" aria-hidden="true">
         <span class="ring ring-1"></span>
         <span class="ring ring-2"></span>
         <span class="ring ring-3"></span>
-        <svg viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Auralis shield">
+        <div class="x-mark" aria-hidden="true"></div>
+        <svg viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Shield">
           <path d="M32 8l20 6v18c0 12.4-8.4 23.6-20 27.2C20.4 55.6 12 44.4 12 32V14z" fill="currentColor" opacity=".18"></path>
           <path d="M32 12l16 4.8V32c0 9.5-6.4 18-16 21-9.6-3-16-11.5-16-21V16.8z" fill="currentColor"></path>
         </svg>
       </div>
+      <div class="splash-brand" data-testid="splash-brand">
+        <span class="brand-name" data-i18n="brand.nameAuralis">Auralis</span>
+        <span class="brand-x" data-i18n="brand.nameX">X</span>
+      </div>
       <p data-i18n="splash.loading">Initializing protection modules...</p>
     </div>
   </div>
-  <div id="cursorGlow" class="cursor-glow"></div>
 
-  <header class="site-header" id="siteHeader">
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader" data-testid="site-header">
     <div class="container nav">
-      <a class="brand" href="#overview">
+      <a class="brand" href="#overview" data-testid="brand-home-link">
         <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l9 5v10l-9 5-9-5V7z" fill="currentColor" opacity=".22"></path>
           <path d="M12 5l6 3.3V16l-6 3-6-3V8.3z" fill="currentColor"></path>
         </svg>
-        <span data-i18n="brand.name">Auralis Secure</span>
+        <span class="brand-text" aria-label="Auralis X" data-testid="brand-text">
+          <span class="brand-name" data-i18n="brand.nameAuralis">Auralis</span>
+          <span class="brand-x" data-i18n="brand.nameX">X</span>
+        </span>
       </a>
-      <nav class="nav-links" id="mainNav">
-        <a href="#overview" data-section="overview" data-i18n="nav.overview">Overview</a>
-        <a href="#protection" data-section="protection" data-i18n="nav.protection">Protection</a>
-        <a href="#download" data-section="download" data-i18n="nav.download">Download</a>
-        <a href="#settings" data-section="settings" data-i18n="nav.settings">Settings</a>
+
+      <nav class="nav-links" id="mainNav" aria-label="Primary" data-testid="main-nav">
+        <a href="#overview" data-section="overview" data-i18n="nav.overview" data-testid="nav-overview-link">Overview</a>
+        <a href="#protection" data-section="protection" data-i18n="nav.protection" data-testid="nav-protection-link">Protection</a>
+        <a href="#features" data-section="features" data-i18n="nav.modules" data-testid="nav-modules-link">Modules</a>
+        <a href="#testing" data-section="testing" data-i18n="nav.testing" data-testid="nav-testing-link">Testing builds</a>
+        <a href="#guides" data-section="guides" data-i18n="nav.guides" data-testid="nav-guides-link">Guides</a>
+        <a href="#download" data-section="download" data-i18n="nav.download" data-testid="nav-download-link">Download</a>
+        <a href="#settings" data-section="settings" data-i18n="nav.settings" data-testid="nav-settings-link">Settings</a>
       </nav>
-      <div class="controls">
-        <div class="theme-switch" role="group" aria-label="Themes">
-          <button class="btn theme-btn" data-theme="theme-system" aria-label="System">SYS</button>
-          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark">DRK</button>
-          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light">LGT</button>
-          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue">BLU</button>
-          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green">GRN</button>
-          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet">VLT</button>
-          <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber">AMB</button>
+
+      <div class="controls" data-testid="header-controls">
+        <select id="sectionSelect" class="select select-section" aria-label="Navigate sections" data-testid="section-select">
+          <option value="overview" data-i18n="nav.overview">Overview</option>
+          <option value="protection" data-i18n="nav.protection">Protection</option>
+          <option value="features" data-i18n="nav.modules">Modules</option>
+          <option value="testing" data-i18n="nav.testing">Testing builds</option>
+          <option value="guides" data-i18n="nav.guides">Guides</option>
+          <option value="download" data-i18n="nav.download">Download</option>
+          <option value="settings" data-i18n="nav.settings">Settings</option>
+        </select>
+
+        <div class="theme-switch" role="group" aria-label="Themes" data-testid="theme-switch">
+          <button class="btn theme-btn" data-theme="theme-system" aria-label="System" data-testid="theme-system-button">SYS</button>
+          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark" data-testid="theme-dark-button">DRK</button>
+          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light" data-testid="theme-light-button">LGT</button>
+          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue" data-testid="theme-blue-button">BLU</button>
+          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green" data-testid="theme-green-button">GRN</button>
+          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet" data-testid="theme-violet-button">VLT</button>
+          <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber" data-testid="theme-amber-button">AMB</button>
         </div>
-        <select id="langSelect" class="select" aria-label="Select language">
+
+        <select id="langSelect" class="select" aria-label="Select language" data-testid="language-select">
           <option value="ru">RU</option>
           <option value="en">EN</option>
           <option value="uk">UK</option>
@@ -60,39 +85,41 @@
     </div>
   </header>
 
-  <main id="top">
-    <section id="overview" class="hero section">
+  <main id="top" class="tab-panels" data-testid="tab-panels">
+    <section id="overview" class="hero section tab-section is-active" data-testid="section-overview">
       <div class="container hero-layout">
         <div class="hero-copy reveal">
-          <span class="hero-badge" data-i18n="hero.badge">Always-on protection</span>
-          <h1 data-i18n="hero.title">Auralis web interface for instant cyber security</h1>
-          <p class="muted" data-i18n="hero.subtitle">
+          <span class="hero-badge" data-i18n="hero.badge" data-testid="hero-badge">Always-on protection</span>
+          <h1 data-i18n="hero.title" data-testid="hero-title">Auralis X web interface for instant cyber security</h1>
+          <p class="muted" data-i18n="hero.subtitle" data-testid="hero-subtitle">
             Monitor the health of your protection, launch scans, and follow threats in real time inside a futuristic console.
           </p>
-          <div class="hero-actions">
-            <a href="#download" class="btn btn-primary glow" data-i18n="hero.ctaPrimary">Download for Windows</a>
-            <a href="#protection" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Open dashboard</a>
+          <div class="hero-actions" data-testid="hero-actions">
+            <a href="#download" class="btn btn-primary glow" data-i18n="hero.ctaPrimary" data-testid="hero-cta-primary">Download for Windows</a>
+            <a href="#protection" class="btn btn-ghost" data-i18n="hero.ctaSecondary" data-testid="hero-cta-secondary">Open dashboard</a>
           </div>
-          <ul class="hero-metrics">
+          <ul class="hero-metrics" data-testid="hero-metrics">
             <li>
-              <strong data-i18n="hero.metrics.0.value">24/7</strong>
-              <span data-i18n="hero.metrics.0.label">Active defence</span>
+              <strong data-i18n="hero.metrics.0.value" data-testid="hero-metric-0-value">24/7</strong>
+              <span data-i18n="hero.metrics.0.label" data-testid="hero-metric-0-label">Active defence</span>
             </li>
             <li>
-              <strong data-i18n="hero.metrics.1.value">+100</strong>
-              <span data-i18n="hero.metrics.1.label">Threats blocked</span>
+              <strong data-i18n="hero.metrics.1.value" data-testid="hero-metric-1-value">+100</strong>
+              <span data-i18n="hero.metrics.1.label" data-testid="hero-metric-1-label">Threats blocked</span>
             </li>
             <li>
-              <strong data-i18n="hero.metrics.2.value">4.8*</strong>
-              <span data-i18n="hero.metrics.2.label">User rating</span>
+              <strong data-i18n="hero.metrics.2.value" data-testid="hero-metric-2-value">4.8*</strong>
+              <span data-i18n="hero.metrics.2.label" data-testid="hero-metric-2-label">User rating</span>
             </li>
           </ul>
         </div>
+
         <div class="hero-visual reveal">
           <div class="hero-shield" aria-hidden="true">
             <span class="pulse pulse-1"></span>
             <span class="pulse pulse-2"></span>
             <span class="pulse pulse-3"></span>
+            <div class="x-mark x-mark--hero" aria-hidden="true"></div>
             <svg viewBox="0 0 64 64" role="presentation">
               <defs>
                 <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -104,100 +131,107 @@
               <path d="M32 12l16 4.8V32c0 9.8-6.6 18.4-16 21.6C22.6 50.4 16 41.8 16 32V16.8z" fill="url(#shieldGradient)"></path>
             </svg>
           </div>
-          <div class="hero-console glass">
+
+          <div class="hero-console glass" data-testid="hero-console">
             <div class="console-row">
-              <span data-i18n="hero.console.statusLabel">System monitoring</span>
-              <span class="status status-online">
-                <span class="status-dot"></span>
-                <span data-i18n="hero.console.statusValue">Online</span>
+              <span data-i18n="hero.console.statusLabel" data-testid="console-status-label">System monitoring</span>
+              <span class="status status-online" data-testid="console-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="hero.console.statusValue" data-testid="console-status-value">Online</span>
               </span>
             </div>
-            <div class="console-monitor" id="browserMonitor">
+
+            <div class="console-monitor" id="browserMonitor" data-testid="browser-monitor">
               <div class="monitor-item">
-                <span class="monitor-label" data-i18n="hero.console.fps">Frame refresh</span>
+                <span class="monitor-label" data-i18n="hero.console.fps" data-testid="monitor-fps-label">Frame refresh</span>
                 <div class="monitor-value">
-                  <strong id="monitorFps">--</strong>
-                  <span class="unit" data-i18n="hero.console.fpsUnit">fps</span>
+                  <strong id="monitorFps" data-testid="monitor-fps-value">--</strong>
+                  <span class="unit" data-i18n="hero.console.fpsUnit" data-testid="monitor-fps-unit">fps</span>
                 </div>
               </div>
               <div class="monitor-item">
-                <span class="monitor-label" data-i18n="hero.console.memory">JS heap</span>
+                <span class="monitor-label" data-i18n="hero.console.memory" data-testid="monitor-memory-label">JS heap</span>
                 <div class="monitor-value">
-                  <strong id="monitorMemory">--</strong>
-                  <span class="unit" data-i18n="hero.console.memoryUnit">MB</span>
+                  <strong id="monitorMemory" data-testid="monitor-memory-value">--</strong>
+                  <span class="unit" data-i18n="hero.console.memoryUnit" data-testid="monitor-memory-unit">MB</span>
                 </div>
               </div>
               <div class="monitor-item">
-                <span class="monitor-label" data-i18n="hero.console.network">Network latency</span>
+                <span class="monitor-label" data-i18n="hero.console.network" data-testid="monitor-network-label">Network latency</span>
                 <div class="monitor-value">
-                  <strong id="monitorNetwork">--</strong>
-                  <span class="unit" id="monitorNetworkUnit" data-i18n="hero.console.networkUnit">ms</span>
+                  <strong id="monitorNetwork" data-testid="monitor-network-value">--</strong>
+                  <span class="unit" id="monitorNetworkUnit" data-i18n="hero.console.networkUnit" data-testid="monitor-network-unit">ms</span>
                 </div>
               </div>
             </div>
-            <div class="console-grid">
+
+            <div class="console-grid" data-testid="console-grid">
               <div>
-                <span data-i18n="hero.console.threats">Threats blocked</span>
-                <strong>+100</strong>
+                <span data-i18n="hero.console.threats" data-testid="console-threats-label">Threats blocked</span>
+                <strong data-testid="console-threats-value">+100</strong>
               </div>
               <div>
-                <span data-i18n="hero.console.quarantine">In quarantine</span>
-                <strong>5</strong>
+                <span data-i18n="hero.console.quarantine" data-testid="console-quarantine-label">In quarantine</span>
+                <strong data-testid="console-quarantine-value">5</strong>
               </div>
             </div>
-            <div class="console-footer">
-              <span data-i18n="hero.console.signature">Signature base</span>
-              <span data-i18n="hero.console.signatureVersion">v1.4.0 | updated 5 min ago</span>
+
+            <div class="console-footer" data-testid="console-footer">
+              <span data-i18n="hero.console.signature" data-testid="console-signature-label">Signature base</span>
+              <span data-i18n="hero.console.signatureVersion" data-testid="console-signature-value">v1.4.0 | updated 5 min ago</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="protection" class="section dashboard">
+    <section id="protection" class="section dashboard tab-section" data-testid="section-protection">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="dashboard.title">Security console</h2>
-          <p class="muted" data-i18n="dashboard.subtitle">
-            Control Auralis protection modules: instant scans, traffic monitoring, and updates with one click.
+          <h2 data-i18n="dashboard.title" data-testid="dashboard-title">Security console</h2>
+          <p class="muted" data-i18n="dashboard.subtitle" data-testid="dashboard-subtitle">
+            Control Auralis X protection modules: instant scans, traffic monitoring, and updates with one click.
           </p>
         </div>
-        <div class="panel-grid">
-          <article class="panel-card reveal">
+
+        <div class="panel-grid" data-testid="dashboard-cards">
+          <article class="panel-card reveal" data-testid="dashboard-scan-card">
             <header>
               <span class="icon icon-scan" aria-hidden="true"></span>
-              <h3 data-i18n="dashboard.cards.scan.title">Instant scan</h3>
+              <h3 data-i18n="dashboard.cards.scan.title" data-testid="dashboard-scan-title">Instant scan</h3>
             </header>
-            <p class="muted" data-i18n="dashboard.cards.scan.desc">
+            <p class="muted" data-i18n="dashboard.cards.scan.desc" data-testid="dashboard-scan-desc">
               Analyse files and memory with cloud signatures and AI heuristics to catch zero-day threats.
             </p>
-            <button class="btn btn-soft" type="button" data-i18n="dashboard.cards.scan.action">Start scan</button>
+            <button class="btn btn-soft" type="button" data-i18n="dashboard.cards.scan.action" data-testid="dashboard-scan-button">Start scan</button>
           </article>
-          <article class="panel-card reveal">
+
+          <article class="panel-card reveal" data-testid="dashboard-network-card">
             <header>
               <span class="icon icon-network" aria-hidden="true"></span>
-              <h3 data-i18n="dashboard.cards.network.title">Network shield</h3>
+              <h3 data-i18n="dashboard.cards.network.title" data-testid="dashboard-network-title">Network shield</h3>
             </header>
-            <p class="muted" data-i18n="dashboard.cards.network.desc">
+            <p class="muted" data-i18n="dashboard.cards.network.desc" data-testid="dashboard-network-desc">
               Filter traffic and block phishing with behavioural analytics and self-updating rules.
             </p>
-            <div class="metric">
-              <strong>42</strong>
-              <span data-i18n="dashboard.cards.network.metric">Connections monitored</span>
+            <div class="metric" data-testid="dashboard-network-metric">
+              <strong data-testid="dashboard-network-metric-value">42</strong>
+              <span data-i18n="dashboard.cards.network.metric" data-testid="dashboard-network-metric-label">Connections monitored</span>
             </div>
           </article>
-          <article class="panel-card reveal">
+
+          <article class="panel-card reveal" data-testid="dashboard-update-card">
             <header>
               <span class="icon icon-update" aria-hidden="true"></span>
-              <h3 data-i18n="dashboard.cards.update.title">Update centre</h3>
+              <h3 data-i18n="dashboard.cards.update.title" data-testid="dashboard-update-title">Update centre</h3>
             </header>
-            <p class="muted" data-i18n="dashboard.cards.update.desc">
+            <p class="muted" data-i18n="dashboard.cards.update.desc" data-testid="dashboard-update-desc">
               Check for updates inside the antivirus and refresh signature packs instantly to stay ahead.
             </p>
-            <div class="update-status">
+            <div class="update-status" data-testid="dashboard-update-status">
               <span class="status status-online">
-                <span class="status-dot"></span>
-                <span data-i18n="dashboard.cards.update.status">All modules current</span>
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="dashboard.cards.update.status" data-testid="dashboard-update-status-text">All modules current</span>
               </span>
             </div>
           </article>
@@ -205,36 +239,37 @@
       </div>
     </section>
 
-    <section id="features" class="section features">
+    <section id="features" class="section features tab-section" data-testid="section-features">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="features.title">Auralis modules</h2>
-          <p class="muted" data-i18n="features.subtitle">
+          <h2 data-i18n="features.title" data-testid="features-title">Auralis X modules</h2>
+          <p class="muted" data-i18n="features.subtitle" data-testid="features-subtitle">
             A futuristic interface and advanced technology give precise control over every security detail.
           </p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <h3 data-i18n="features.cards.0.title">Integrity control</h3>
-            <p data-i18n="features.cards.0.desc">
+
+        <div class="feature-grid" data-testid="features-grid">
+          <article class="feature-card reveal" data-testid="feature-card-0">
+            <h3 data-i18n="features.cards.0.title" data-testid="feature-0-title">Integrity control</h3>
+            <p data-i18n="features.cards.0.desc" data-testid="feature-0-desc">
               Monitor critical files and registry keys with instant alerts and automatic rollback.
             </p>
           </article>
-          <article class="feature-card reveal">
-            <h3 data-i18n="features.cards.1.title">Isolated sandbox</h3>
-            <p data-i18n="features.cards.1.desc">
+          <article class="feature-card reveal" data-testid="feature-card-1">
+            <h3 data-i18n="features.cards.1.title" data-testid="feature-1-title">Isolated sandbox</h3>
+            <p data-i18n="features.cards.1.desc" data-testid="feature-1-desc">
               Launch suspicious apps in a protected environment without risking the main system.
             </p>
           </article>
-          <article class="feature-card reveal">
-            <h3 data-i18n="features.cards.2.title">Data protection</h3>
-            <p data-i18n="features.cards.2.desc">
+          <article class="feature-card reveal" data-testid="feature-card-2">
+            <h3 data-i18n="features.cards.2.title" data-testid="feature-2-title">Data protection</h3>
+            <p data-i18n="features.cards.2.desc" data-testid="feature-2-desc">
               Encrypt sensitive files and resist ransomware with multi-layer backups.
             </p>
           </article>
-          <article class="feature-card reveal">
-            <h3 data-i18n="features.cards.3.title">Performance monitor</h3>
-            <p data-i18n="features.cards.3.desc">
+          <article class="feature-card reveal" data-testid="feature-card-3">
+            <h3 data-i18n="features.cards.3.title" data-testid="feature-3-title">Performance monitor</h3>
+            <p data-i18n="features.cards.3.desc" data-testid="feature-3-desc">
               Analyse module load, receive optimisation tips, and enable autonomous eco mode.
             </p>
           </article>
@@ -242,64 +277,194 @@
       </div>
     </section>
 
-    <section id="download" class="section download">
+    <section id="testing" class="section testing tab-section" data-testid="section-testing">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="testing.title" data-testid="testing-title">Testing builds</h2>
+          <p class="muted" data-i18n="testing.subtitle" data-testid="testing-subtitle">
+            Choose a channel that fits your risk level — from stable to experimental.
+          </p>
+        </div>
+
+        <div class="build-grid" data-testid="testing-build-grid">
+          <article class="build-card reveal" data-testid="build-card-alpha">
+            <div class="build-top">
+              <div class="build-title-row">
+                <h3 data-i18n="testing.cards.alpha.title" data-testid="build-alpha-title">Alpha</h3>
+                <span class="pill pill-experimental" data-i18n="testing.cards.alpha.status" data-testid="build-alpha-status">Experimental</span>
+              </div>
+              <p class="muted" data-i18n="testing.cards.alpha.desc" data-testid="build-alpha-desc">Experimental features. Unstable and may crash.</p>
+            </div>
+            <div class="build-actions">
+              <a class="btn btn-soft" href="#" data-i18n="testing.cards.alpha.cta" data-testid="build-alpha-cta">Join testing</a>
+              <div class="warning" data-i18n="testing.cards.alpha.warning" data-testid="build-alpha-warning">
+                Alpha builds may contain breaking changes. Use on a test machine.
+              </div>
+            </div>
+          </article>
+
+          <article class="build-card reveal" data-testid="build-card-beta">
+            <div class="build-top">
+              <div class="build-title-row">
+                <h3 data-i18n="testing.cards.beta.title" data-testid="build-beta-title">Beta</h3>
+                <span class="pill pill-testing" data-i18n="testing.cards.beta.status" data-testid="build-beta-status">Testing</span>
+              </div>
+              <p class="muted" data-i18n="testing.cards.beta.desc" data-testid="build-beta-desc">Pre-release testing before stable rollout.</p>
+            </div>
+            <div class="build-actions">
+              <a class="btn btn-soft" href="#" data-i18n="testing.cards.beta.cta" data-testid="build-beta-cta">Join testing</a>
+              <div class="warning" data-i18n="testing.cards.beta.warning" data-testid="build-beta-warning">
+                Beta builds are more stable than Alpha, but may still have issues.
+              </div>
+            </div>
+          </article>
+
+          <article class="build-card reveal" data-testid="build-card-stable">
+            <div class="build-top">
+              <div class="build-title-row">
+                <h3 data-i18n="testing.cards.stable.title" data-testid="build-stable-title">Build</h3>
+                <span class="pill pill-stable" data-i18n="testing.cards.stable.status" data-testid="build-stable-status">Stable</span>
+              </div>
+              <p class="muted" data-i18n="testing.cards.stable.desc" data-testid="build-stable-desc">Recommended version for everyday protection.</p>
+            </div>
+            <div class="build-actions">
+              <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-i18n="testing.cards.stable.cta" data-testid="build-stable-cta">Download</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="muted small-note" data-i18n="testing.note" data-testid="testing-note">
+          Tip: you can switch back to Stable at any moment — see Guides.
+        </p>
+      </div>
+    </section>
+
+    <section id="guides" class="section guides tab-section" data-testid="section-guides">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="guides.title" data-testid="guides-title">Instructions / Guides</h2>
+          <p class="muted" data-i18n="guides.subtitle" data-testid="guides-subtitle">
+            Short, practical steps to install, verify, and manage Auralis X builds.
+          </p>
+        </div>
+
+        <div class="guide-grid" data-testid="guides-grid">
+          <article class="guide-card reveal" data-testid="guide-install-card">
+            <header class="guide-head">
+              <span class="guide-icon guide-icon-install" aria-hidden="true"></span>
+              <h3 data-i18n="guides.cards.install.title" data-testid="guide-install-title">How to install Auralis X</h3>
+            </header>
+            <ol class="steps" data-testid="guide-install-steps">
+              <li data-i18n="guides.cards.install.steps.0" data-testid="guide-install-step-0"></li>
+              <li data-i18n="guides.cards.install.steps.1" data-testid="guide-install-step-1"></li>
+              <li data-i18n="guides.cards.install.steps.2" data-testid="guide-install-step-2"></li>
+              <li data-i18n="guides.cards.install.steps.3" data-testid="guide-install-step-3"></li>
+            </ol>
+          </article>
+
+          <article class="guide-card reveal" data-testid="guide-signature-card">
+            <header class="guide-head">
+              <span class="guide-icon guide-icon-verify" aria-hidden="true"></span>
+              <h3 data-i18n="guides.cards.verify.title" data-testid="guide-verify-title">How to verify the file signature</h3>
+            </header>
+            <ol class="steps" data-testid="guide-verify-steps">
+              <li data-i18n="guides.cards.verify.steps.0" data-testid="guide-verify-step-0"></li>
+              <li data-i18n="guides.cards.verify.steps.1" data-testid="guide-verify-step-1"></li>
+              <li data-i18n="guides.cards.verify.steps.2" data-testid="guide-verify-step-2"></li>
+              <li data-i18n="guides.cards.verify.steps.3" data-testid="guide-verify-step-3"></li>
+            </ol>
+          </article>
+
+          <article class="guide-card reveal" data-testid="guide-testing-card">
+            <header class="guide-head">
+              <span class="guide-icon guide-icon-testing" aria-hidden="true"></span>
+              <h3 data-i18n="guides.cards.enableTesting.title" data-testid="guide-enable-testing-title">How to enable testing builds</h3>
+            </header>
+            <ol class="steps" data-testid="guide-enable-testing-steps">
+              <li data-i18n="guides.cards.enableTesting.steps.0" data-testid="guide-enable-testing-step-0"></li>
+              <li data-i18n="guides.cards.enableTesting.steps.1" data-testid="guide-enable-testing-step-1"></li>
+              <li data-i18n="guides.cards.enableTesting.steps.2" data-testid="guide-enable-testing-step-2"></li>
+            </ol>
+          </article>
+
+          <article class="guide-card reveal" data-testid="guide-rollback-card">
+            <header class="guide-head">
+              <span class="guide-icon guide-icon-rollback" aria-hidden="true"></span>
+              <h3 data-i18n="guides.cards.rollback.title" data-testid="guide-rollback-title">How to rollback to stable</h3>
+            </header>
+            <ol class="steps" data-testid="guide-rollback-steps">
+              <li data-i18n="guides.cards.rollback.steps.0" data-testid="guide-rollback-step-0"></li>
+              <li data-i18n="guides.cards.rollback.steps.1" data-testid="guide-rollback-step-1"></li>
+              <li data-i18n="guides.cards.rollback.steps.2" data-testid="guide-rollback-step-2"></li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section download tab-section" data-testid="section-download">
       <div class="container download-layout">
         <div class="download-copy reveal">
-          <h2 data-i18n="download.title">Download Auralis</h2>
-          <p class="muted" data-i18n="download.desc">
-            Install Auralis Secure Antivirus for Windows and link the web console for remote administration.
+          <h2 data-i18n="download.title" data-testid="download-title">Download Auralis X</h2>
+          <p class="muted" data-i18n="download.desc" data-testid="download-desc">
+            Install Auralis X for Windows and link the web console for remote administration.
           </p>
-        <div class="download-version">
-          <span class="label" data-i18n="download.releaseLabel">Release version</span>
-          <span class="value" id="releaseTag">release 1.4.0</span>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener">
-            <span class="btn-icon" aria-hidden="true">&#129695;</span>
-            <span data-i18n="download.ctaWin">Download for Windows</span>
-            </a>
-            <a class="btn btn-ghost" href="#" data-i18n="download.ctaDocs">Documentation</a>
+
+          <div class="download-version" data-testid="download-version">
+            <span class="label" data-i18n="download.releaseLabel" data-testid="download-release-label">Release version</span>
+            <span class="value" id="releaseTag" data-testid="download-release-value">release 1.4.0</span>
           </div>
-          <ul class="download-points">
-            <li data-i18n="download.points.0">Full security control without complex configuration.</li>
-            <li data-i18n="download.points.1">Real-time updates and cloud analytics.</li>
-            <li data-i18n="download.points.2">Integration with enterprise infrastructure.</li>
+
+          <div class="cta" data-testid="download-cta">
+            <a class="btn btn-primary glow" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-testid="download-windows-button">
+              <span class="btn-icon" aria-hidden="true">&#129695;</span>
+              <span data-i18n="download.ctaWin">Download for Windows</span>
+            </a>
+            <a class="btn btn-ghost" href="#guides" data-i18n="download.ctaDocs" data-testid="download-docs-button">Documentation</a>
+          </div>
+
+          <ul class="download-points" data-testid="download-points">
+            <li data-i18n="download.points.0" data-testid="download-point-0">Full security control without complex configuration.</li>
+            <li data-i18n="download.points.1" data-testid="download-point-1">Real-time updates and cloud analytics.</li>
+            <li data-i18n="download.points.2" data-testid="download-point-2">Integration with enterprise infrastructure.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="settings" class="section settings">
+    <section id="settings" class="section settings tab-section" data-testid="section-settings">
       <div class="container">
         <div class="section-head reveal">
-          <h2 data-i18n="settings.title">Settings panel</h2>
-          <p class="muted" data-i18n="settings.subtitle">
+          <h2 data-i18n="settings.title" data-testid="settings-title">Settings panel</h2>
+          <p class="muted" data-i18n="settings.subtitle" data-testid="settings-subtitle">
             Enable additional modules and keep an eye on your network whenever you need it.
           </p>
         </div>
-        <div class="settings-grid">
-          <article class="panel-card ip-toggle reveal">
+
+        <div class="settings-grid" data-testid="settings-grid">
+          <article class="panel-card ip-toggle reveal" data-testid="settings-ip-toggle-card">
             <div>
-              <h3 data-i18n="settings.ipToggle.title">Show IP address</h3>
-              <p class="muted" data-i18n="settings.ipToggle.desc">
+              <h3 data-i18n="settings.ipToggle.title" data-testid="settings-ip-toggle-title">Show IP address</h3>
+              <p class="muted" data-i18n="settings.ipToggle.desc" data-testid="settings-ip-toggle-desc">
                 Display the external IP with a dynamic refresh and a visual network status indicator.
               </p>
             </div>
-            <label class="switch">
-              <input id="showIpToggle" type="checkbox" />
-              <span></span>
+            <label class="switch" data-testid="settings-ip-toggle-switch">
+              <input id="showIpToggle" type="checkbox" data-testid="settings-ip-toggle-input" />
+              <span aria-hidden="true"></span>
             </label>
           </article>
-          <article class="panel-card ip-panel glass reveal" id="ipPanel" hidden>
+
+          <article class="panel-card ip-panel glass reveal" id="ipPanel" hidden data-testid="settings-ip-panel">
             <header>
-              <span data-i18n="settings.ipTitle">Current IP</span>
-              <span class="status status-sync" id="ipStatus">
-                <span class="status-dot"></span>
-                <span id="ipStatusText" data-i18n="settings.ipStatus">Updating</span>
+              <span data-i18n="settings.ipTitle" data-testid="settings-ip-title">Current IP</span>
+              <span class="status status-sync" id="ipStatus" data-testid="settings-ip-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="ipStatusText" data-i18n="settings.ipStatus" data-testid="settings-ip-status-text">Updating</span>
               </span>
             </header>
-            <div class="ip-value shimmer" id="ipValue">--.--.--.--</div>
-            <p class="muted" data-i18n="settings.ipNote">
+            <div class="ip-value shimmer" id="ipValue" data-testid="settings-ip-value">--.--.--.--</div>
+            <p class="muted" data-i18n="settings.ipNote" data-testid="settings-ip-note">
               Your IP is refreshed each time the block is enabled. Requests are made securely over HTTPS.
             </p>
           </article>
@@ -308,10 +473,10 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-testid="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Auralis</p>
-      <a href="mailto:auralissecureantivirus@gmail.com" id="mailLink" data-mail="auralissecureantivirus@gmail.com">auralissecureantivirus@gmail.com</a>
+      <p data-testid="footer-copyright">&copy; <span id="year"></span> <span class="footer-brand">Auralis X</span></p>
+      <a href="mailto:auralissecureantivirus@gmail.com" id="mailLink" data-mail="auralissecureantivirus@gmail.com" data-testid="footer-mail-link">auralissecureantivirus@gmail.com</a>
     </div>
   </footer>
 

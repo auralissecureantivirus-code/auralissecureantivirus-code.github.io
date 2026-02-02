@@ -1,217 +1,230 @@
 {
   "ru": {
     "meta": {
-      "title": "Auralis Antivirus",
-      "description": "\u0412\u0435\u0431-\u043a\u043e\u043d\u0441\u043e\u043b\u044c Auralis Secure Antivirus: \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435\u043c \u0437\u0430\u0449\u0438\u0442\u044b, \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438."
+      "title": "Auralis X",
+      "description": "Веб-консоль Auralis X: управление защитой, сканированием и обновлениями в реальном времени."
     },
     "brand": {
-      "name": "Auralis Secure"
+      "nameAuralis": "Auralis",
+      "nameX": "X"
     },
     "splash": {
-      "loading": "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u043c\u043e\u0434\u0443\u043b\u0435\u0439 \u0437\u0430\u0449\u0438\u0442\u044b..."
+      "loading": "Загрузка модулей защиты…"
     },
     "nav": {
-      "overview": "\u041e\u0431\u0437\u043e\u0440",
-      "protection": "\u0417\u0430\u0449\u0438\u0442\u0430",
-      "download": "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430",
-      "settings": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438"
+      "overview": "Обзор",
+      "protection": "Защита",
+      "modules": "Модули",
+      "testing": "Тестирование версий",
+      "guides": "Инструкции",
+      "download": "Загрузка",
+      "settings": "Настройки"
     },
     "hero": {
-      "badge": "\u041f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0430",
-      "title": "\u0412\u0435\u0431-\u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Auralis \u0434\u043b\u044f \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e\u0439 \u043a\u0438\u0431\u0435\u0440\u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438",
-      "subtitle": "\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0439\u0442\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u0432\u0430\u0448\u0435\u0439 \u0437\u0430\u0449\u0438\u0442\u044b, \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u0441\u043b\u0435\u0434\u0438\u0442\u0435 \u0437\u0430 \u0443\u0433\u0440\u043e\u0437\u0430\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0432\u043d\u0443\u0442\u0440\u0438 \u0444\u0443\u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u043e\u043d\u0441\u043e\u043b\u044c.",
-      "ctaPrimary": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0434\u043b\u044f Windows",
-      "ctaSecondary": "\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043f\u0430\u043d\u0435\u043b\u044c \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f",
+      "badge": "Постоянная защита",
+      "title": "Веб-интерфейс Auralis X для тихой кибербезопасности",
+      "subtitle": "Отслеживайте состояние защиты, запускайте проверки и наблюдайте угрозы в реальном времени внутри футуристичной консоли.",
+      "ctaPrimary": "Скачать для Windows",
+      "ctaSecondary": "Открыть панель",
       "metrics": [
         {
           "value": "24/7",
-          "label": "\u0410\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0430"
+          "label": "Активная защита"
         },
         {
           "value": "+100",
-          "label": "\u0423\u0433\u0440\u043e\u0437\u044b \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b"
+          "label": "Угроз заблокировано"
         },
         {
           "value": "4.8*",
-          "label": "\u0420\u0435\u0439\u0442\u0438\u043d\u0433 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f"
+          "label": "Рейтинг пользователей"
         }
       ],
       "console": {
-        "statusLabel": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0441\u0438\u0441\u0442\u0435\u043c\u044b",
-        "statusValue": "\u041e\u043d\u043b\u0430\u0439\u043d",
-        "threats": "\u0423\u0433\u0440\u043e\u0437\u044b \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b",
-        "quarantine": "\u0412 \u043a\u0430\u0440\u0430\u043d\u0442\u0438\u043d\u0435",
-        "signature": "\u0411\u0430\u0437\u0430 \u043f\u043e\u0434\u043f\u0438\u0441\u0435\u0439",
-        "signatureVersion": "v1.4.0 | \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e 5 \u043c\u0438\u043d\u0443\u0442 \u043d\u0430\u0437\u0430\u0434",
-        "fps": "\u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f",
+        "statusLabel": "Мониторинг системы",
+        "statusValue": "Онлайн",
+        "threats": "Угроз заблокировано",
+        "quarantine": "В карантине",
+        "signature": "База подписей",
+        "signatureVersion": "v1.4.0 | обновлено 5 минут назад",
+        "fps": "Частота обновления",
         "fpsUnit": "fps",
-        "memory": "JS-\u043f\u0430\u043c\u044f\u0442\u044c",
-        "memoryUnit": "\u041c\u0411",
-        "network": "\u0421\u0435\u0442\u0435\u0432\u0430\u044f \u0437\u0430\u0434\u0435\u0440\u0436\u043a\u0430",
-        "networkUnit": "\u043c\u0441",
-        "networkUnitAlt": "\u041c\u0431\u0438\u0442/\u0441",
-        "networkOffline": "\u043e\u0444\u0444\u043b\u0430\u0439\u043d",
-        "networkFallback": "\u043e\u043d\u043b\u0430\u0439\u043d",
+        "memory": "JS-память",
+        "memoryUnit": "МБ",
+        "network": "Сетевая задержка",
+        "networkUnit": "мс",
+        "networkUnitAlt": "Мбит/с",
+        "networkOffline": "оффлайн",
+        "networkFallback": "онлайн",
         "monitorUnavailable": "--"
       }
     },
     "dashboard": {
-      "title": "\u041a\u043e\u043d\u0441\u043e\u043b\u044c \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438",
-      "subtitle": "\u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u043c\u043e\u0434\u0443\u043b\u044f\u043c\u0438 \u0437\u0430\u0449\u0438\u0442\u044b Auralis: \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e\u0435 \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435, \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0442\u0440\u0430\u0444\u0438\u043a\u0430 \u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u043e\u0434\u043d\u0438\u043c \u0449\u0435\u043b\u0447\u043a\u043e\u043c \u043c\u044b\u0448\u0438.",
+      "title": "Консоль безопасности",
+      "subtitle": "Управляйте модулями защиты Auralis X: мгновенная проверка, мониторинг трафика и обновления одним кликом.",
       "cards": {
         "scan": {
-          "title": "\u041c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e\u0435 \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435",
-          "desc": "\u0410\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0443\u0439\u0442\u0435 \u0444\u0430\u0439\u043b\u044b \u0438 \u043f\u0430\u043c\u044f\u0442\u044c \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043e\u0431\u043b\u0430\u0447\u043d\u044b\u0445 \u0441\u0438\u0433\u043d\u0430\u0442\u0443\u0440 \u0438 \u044d\u0432\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438\u0441\u043a\u0443\u0441\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0433\u043e \u0438\u043d\u0442\u0435\u043b\u043b\u0435\u043a\u0442\u0430 \u0434\u043b\u044f \u0432\u044b\u044f\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0433\u0440\u043e\u0437 \u043d\u0443\u043b\u0435\u0432\u043e\u0433\u043e \u0434\u043d\u044f.",
-          "action": "\u041d\u0430\u0447\u0430\u0442\u044c \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435"
+          "title": "Мгновенная проверка",
+          "desc": "Анализируйте файлы и память с облачными сигнатурами и эвристикой, чтобы ловить угрозы нулевого дня.",
+          "action": "Начать проверку"
         },
         "network": {
-          "title": "\u0421\u0435\u0442\u0435\u0432\u043e\u0439 \u0449\u0438\u0442",
-          "desc": "\u0424\u0438\u043b\u044c\u0442\u0440\u043e\u0432\u0430\u0442\u044c \u0442\u0440\u0430\u0444\u0438\u043a \u0438 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0444\u0438\u0448\u0438\u043d\u0433 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043f\u043e\u0432\u0435\u0434\u0435\u043d\u0447\u0435\u0441\u043a\u043e\u0439 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438 \u0438 \u043f\u0440\u0430\u0432\u0438\u043b \u0441\u0430\u043c\u043e\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f.",
-          "metric": "\u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u0435\u043c\u044b\u0439"
+          "title": "Сетевой щит",
+          "desc": "Фильтруйте трафик и блокируйте фишинг с поведенческой аналитикой и самообновляющимися правилами.",
+          "metric": "Подключений под контролем"
         },
         "update": {
-          "title": "\u0426\u0435\u043d\u0442\u0440 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439",
-          "desc": "\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0439\u0442\u0435 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0432 \u043d\u0430\u0448\u0435\u043c \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u0435 \u0438 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0439\u0442\u0435 \u0441\u0438\u0433\u043d\u0430\u0442\u0443\u0440\u044b \u0434\u043b\u044f \u0443\u0441\u0438\u043b\u0435\u043d\u043d\u043e\u0439 \u0437\u0430\u0449\u0438\u0442\u044b.",
-          "status": "\u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e"
+          "title": "Центр обновлений",
+          "desc": "Проверяйте обновления и обновляйте пакеты сигнатур, чтобы оставаться на шаг впереди.",
+          "status": "Актуально"
         }
       }
     },
     "features": {
-      "title": "\u041c\u043e\u0434\u0443\u043b\u0438 Auralis",
-      "subtitle": "\u0424\u0443\u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u0438 \u043f\u0435\u0440\u0435\u0434\u043e\u0432\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044e\u0442 \u0442\u043e\u0447\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u043d\u0430\u0434 \u043a\u0430\u0436\u0434\u043e\u0439 \u0434\u0435\u0442\u0430\u043b\u044c\u044e \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438.",
+      "title": "Модули Auralis X",
+      "subtitle": "Футуристичный интерфейс и технологии дают точный контроль над каждой деталью безопасности.",
       "cards": [
         {
-          "title": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0446\u0435\u043b\u043e\u0441\u0442\u043d\u043e\u0441\u0442\u0438",
-          "desc": "\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u0432\u0430\u0436\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u043a\u043b\u044e\u0447\u0435\u0439 \u0440\u0435\u0435\u0441\u0442\u0440\u0430 \u0441 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u043c\u0438 \u043e\u043f\u043e\u0432\u0435\u0449\u0435\u043d\u0438\u044f\u043c\u0438 \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u043e\u0442\u043a\u0430\u0442\u043e\u043c."
+          "title": "Контроль целостности",
+          "desc": "Мониторинг важных файлов и ключей реестра с мгновенными уведомлениями и авто-откатом."
         },
         {
-          "title": "\u0418\u0437\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f \u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0430",
-          "desc": "\u0417\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u043f\u043e\u0434\u043e\u0437\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0432 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u043d\u043e\u0439 \u0441\u0440\u0435\u0434\u0435, \u043d\u0435 \u043f\u043e\u0434\u0432\u0435\u0440\u0433\u0430\u044f \u0440\u0438\u0441\u043a\u0443 \u043e\u0441\u043d\u043e\u0432\u043d\u0443\u044e \u0441\u0438\u0441\u0442\u0435\u043c\u0443."
+          "title": "Изолированная песочница",
+          "desc": "Запускайте подозрительные приложения в защищенной среде без риска для основной системы."
         },
         {
-          "title": "\u0417\u0430\u0449\u0438\u0442\u0430 \u0434\u0430\u043d\u043d\u044b\u0445",
-          "desc": "\u0428\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0437\u0430\u0449\u0438\u0442\u0430 \u043e\u0442 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c-\u0432\u044b\u043c\u043e\u0433\u0430\u0442\u0435\u043b\u0435\u0439 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043c\u043d\u043e\u0433\u043e\u0443\u0440\u043e\u0432\u043d\u0435\u0432\u044b\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0435 \u043a\u043e\u043f\u0438\u0438."
+          "title": "Защита данных",
+          "desc": "Шифруйте чувствительные файлы и сопротивляйтесь вымогателям с многоуровневыми резервными копиями."
         },
         {
-          "title": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
-          "desc": "\u0410\u043d\u0430\u043b\u0438\u0437 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u043c\u043e\u0434\u0443\u043b\u044f, \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0441\u043e\u0432\u0435\u0442\u043e\u0432 \u043f\u043e \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u0438 \u0438 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0433\u043e \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u043d\u043e\u0433\u043e \u0440\u0435\u0436\u0438\u043c\u0430."
+          "title": "Монитор производительности",
+          "desc": "Анализируйте нагрузку модулей, получайте подсказки по оптимизации и включайте экономичный режим."
         }
       ]
     },
-    "download": {
-      "title": "\u0421\u043a\u0430\u0447\u0430\u0439\u0442\u0435 Auralis",
-      "desc": "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 Auralis Secure Antivirus \u0434\u043b\u044f Windows \u0438 \u0441\u0432\u044f\u0436\u0438\u0442\u0435 \u0432\u0435\u0431-\u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0434\u043b\u044f \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f.",
-      "releaseLabel": "\u0420\u0435\u043b\u0438\u0437\u043d\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f",
-      "ctaWin": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0434\u043b\u044f Windows",
-      "ctaDocs": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f",
-      "points": [
-        "\u041f\u043e\u043b\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u0431\u0435\u0437 \u0441\u043b\u043e\u0436\u043d\u043e\u0439 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438.",
-        "\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0438 \u043e\u0431\u043b\u0430\u0447\u043d\u0430\u044f \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430.",
-        "\u0418\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0441 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u044f\u0442\u0438\u0435\u043c "
-      ],
-      "hashTitle": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u0430\u044f \u0441\u0443\u043c\u043c\u0430",
-      "hashDesc": "\u041f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u0443\u044e \u043f\u043e\u0434\u043f\u0438\u0441\u044c \u043f\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u043e\u0439, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c \u0446\u0435\u043b\u043e\u0441\u0442\u043d\u043e\u0441\u0442\u044c \u043f\u0430\u043a\u0435\u0442\u0430.",
-      "verify": "\u041a\u0430\u043a \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u043f\u043e\u0434\u043f\u0438\u0441\u044c?"
-    },
-    "settings": {
-      "title": "\u041f\u0430\u043d\u0435\u043b\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a",
-      "subtitle": "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043c\u043e\u0434\u0443\u043b\u0438 \u0438 \u0441\u043b\u0435\u0434\u0438\u0442\u0435 \u0437\u0430 \u0441\u0432\u043e\u0435\u0439 \u0441\u0435\u0442\u044c\u044e, \u043a\u043e\u0433\u0434\u0430 \u0432\u0430\u043c \u044d\u0442\u043e \u043d\u0443\u0436\u043d\u043e.",
-      "ipToggle": {
-        "title": "\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c IP-\u0430\u0434\u0440\u0435\u0441",
-        "desc": "\u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0442\u044c \u0432\u043d\u0435\u0448\u043d\u0438\u0439 IP-\u0430\u0434\u0440\u0435\u0441 \u0441 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435\u043c \u0438 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u043c \u0438\u043d\u0434\u0438\u043a\u0430\u0442\u043e\u0440\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0441\u0435\u0442\u0438."
-      },
-      "ipTitle": "\u0422\u0435\u043a\u0443\u0449\u0438\u0439 IP",
-      "ipStatus": "\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435",
-      "ipStatusReady": "\u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u043e",
-      "ipStatusError": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u044f",
-      "ipNote": "\u0412\u0430\u0448 IP \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437 \u043f\u0440\u0438 \u0432\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438 \u0431\u043b\u043e\u043a\u0430. \u0417\u0430\u043f\u0440\u043e\u0441\u044b \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u044e\u0442\u0441\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u0447\u0435\u0440\u0435\u0437 HTTPS."
-    },
-    "updates": {
-      "status": {
-        "idle": "\u0423 \u0432\u0430\u0441 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f {version}.",
-        "checking": "\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f\u2026",
-        "current": "\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e. \u0422\u0435\u043a\u0443\u0449\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f {version}.",
-        "available": "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435! \u041d\u043e\u0432\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f {remote}.",
-        "error": "\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f. \u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u043f\u043e\u0437\u0436\u0435."
-      },
-      "label": {
-        "current": "\u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e",
-        "checking": "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430\u2026",
-        "available": "\u0415\u0441\u0442\u044c \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435",
-        "error": "\u041e\u0448\u0438\u0431\u043a\u0430"
+    "testing": {
+      "title": "Тестирование версий",
+      "subtitle": "Выберите канал по уровню риска — от стабильной сборки до экспериментальной.",
+      "note": "Подсказка: на Stable можно вернуться в любой момент — смотрите Инструкции.",
+      "cards": {
+        "alpha": {
+          "title": "Alpha",
+          "status": "Experimental",
+          "desc": "Экспериментальные функции. Нестабильная версия.",
+          "cta": "Присоединиться",
+          "warning": "Alpha может содержать критические баги. Используйте на тестовой системе."
+        },
+        "beta": {
+          "title": "Beta",
+          "status": "Testing",
+          "desc": "Тестирование перед релизом.",
+          "cta": "Присоединиться",
+          "warning": "Beta обычно стабильнее Alpha, но ошибки всё ещё возможны."
+        },
+        "stable": {
+          "title": "Build",
+          "status": "Stable",
+          "desc": "Рекомендуемая версия для ежедневной защиты.",
+          "cta": "Скачать"
+        }
       }
     },
-    "changelog": {
-      "title": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439",
-      "subtitle": "\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0439\u0442\u0435, \u043a\u0430\u043a \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0435\u0442\u0441\u044f Auralis \u0441 \u043a\u0430\u0436\u0434\u044b\u043c \u0440\u0435\u043b\u0438\u0437\u043e\u043c, \u0438 \u0438\u0437\u0443\u0447\u0430\u0439\u0442\u0435 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u043a\u0430\u0436\u0434\u043e\u0439 \u0432\u0435\u0440\u0441\u0438\u0438.",
-      "items": [
-        {
-          "version": "v1.4.0",
-          "date": "2025-10-25",
-          "points": [
-            "\u041c\u0443\u043b\u044c\u0442\u0438\u044f\u0437\u044b\u0447\u043d\u0430\u044f \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 (\u0440\u0443\u0441\u0441\u043a\u0438\u0439, \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439, \u0443\u043a\u0440\u0430\u0438\u043d\u0441\u043a\u0438\u0439)",
-            "\u041d\u043e\u0432\u044b\u0439 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0438\u0437\u0430\u0439\u043d \u0441 \u0430\u043d\u0438\u043c\u0430\u0446\u0438\u044f\u043c\u0438",
-            "\u0410\u043d\u0438\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0449\u0438\u0442 \u0437\u0430\u0449\u0438\u0442\u044b \u0441 \u043f\u0443\u043b\u044c\u0441\u0430\u0446\u0438\u0435\u0439",
-            "\u041a\u0440\u0443\u0433\u043e\u0432\u044b\u0435 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441-\u0431\u0430\u0440\u044b \u0434\u043b\u044f \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430",
-            "\u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u0447\u0430\u0441\u0442\u0438\u0446 \u043d\u0430 \u0444\u043e\u043d\u0435",
-            "\u041d\u043e\u0432\u0430\u044f \u0432\u043a\u043b\u0430\u0434\u043a\u0430 \u00ab\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430\u00bb \u0441 \u0433\u0440\u0430\u0444\u0438\u043a\u0430\u043c\u0438",
-            "\u042d\u0444\u0444\u0435\u043a\u0442 \u043a\u043e\u043d\u0444\u0435\u0442\u0442\u0438 \u043f\u043e\u0441\u043b\u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e\u0433\u043e \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f",
-            "\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u044c \u0446\u0432\u0435\u0442\u043e\u0432\u044b\u0445 \u0442\u0435\u043c",
-            "\u0423\u043b\u0443\u0447\u0448\u0435\u043d\u043d\u044b\u0435 \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u044b \u043c\u0435\u0436\u0434\u0443 \u0432\u043a\u043b\u0430\u0434\u043a\u0430\u043c\u0438",
-            "\u0414\u0435\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0437\u0430\u0449\u0438\u0442\u044b",
-            "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0435 \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u044f \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0430",
-            "\u0418\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0430 \u0444\u0443\u043d\u043a\u0446\u0438\u044f \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f IP",
-            "\u041a\u0440\u0430\u0441\u0438\u0432\u044b\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0441 \u0430\u043d\u0438\u043c\u0430\u0446\u0438\u044f\u043c\u0438"
+    "guides": {
+      "title": "Instructions / Guides",
+      "subtitle": "Короткие шаги для установки, проверки и управления сборками Auralis X.",
+      "cards": {
+        "install": {
+          "title": "Как установить Auralis X",
+          "steps": [
+            "Скачайте стабильную сборку в разделе Download или Testing builds (Build).",
+            "Откройте свойства файла и убедитесь, что источник загрузки вам доверен.",
+            "Запустите установщик от имени администратора и завершите установку.",
+            "После установки выполните первую проверку и обновите базы." 
           ]
         },
-        {
-          "version": "v1.2.0",
-          "date": "2025-10-15",
-          "points": [
-            "\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0441\u0438\u0441\u0442\u0435\u043c\u044b (CPU, RAM, GPU)",
-            "\u041d\u043e\u0432\u0430\u044f \u0432\u043a\u043b\u0430\u0434\u043a\u0430 \u00ab\u041f\u0440\u043e \u041f\u041a \u0438 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u00bb",
-            "\u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0439 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438",
-            "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439 \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u0430",
-            "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0439",
-            "\u0423\u043b\u0443\u0447\u0448\u0435\u043d\u0430 \u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0438 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c"
+        "verify": {
+          "title": "Как проверить подпись файла",
+          "steps": [
+            "Windows: кликните правой кнопкой по файлу → Свойства.",
+            "Откройте вкладку “Цифровые подписи” (если доступно).",
+            "Проверьте, что подпись действительна и не повреждена.",
+            "Если подписи нет — не запускайте файл и скачайте заново из доверенного источника." 
           ]
         },
-        {
-          "version": "v1.1.0",
-          "date": "2025-10-08",
-          "points": [
-            "\u0423\u043b\u0443\u0447\u0448\u0435\u043d UI \u0438 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0430 \u0432\u043a\u043b\u0430\u0434\u043a\u0430 \u00ab\u0418\u0441\u0442\u043e\u0440\u0438\u044f\u00bb",
-            "\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0430 \u044d\u043c\u0443\u043b\u044f\u0446\u0438\u044f \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f",
-            "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0430\u0432\u0442\u043e\u0437\u0430\u043f\u0443\u0441\u043a\u0430",
-            "\u042d\u043a\u0441\u043f\u043e\u0440\u0442 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u043e\u043a"
+        "enableTesting": {
+          "title": "Как включить тестовые версии",
+          "steps": [
+            "Выберите Beta или Alpha в разделе Testing builds.",
+            "Установите поверх текущей версии или в отдельную папку (рекомендуется для Alpha).",
+            "При проблемах вернитесь на Stable по инструкции “Rollback”." 
+          ]
+        },
+        "rollback": {
+          "title": "Как откатиться на стабильную версию",
+          "steps": [
+            "Удалите Alpha/Beta через “Приложения и компоненты” (или используйте деинсталлятор).",
+            "Скачайте Stable (Build) и установите заново.",
+            "После установки обновите базы и проверьте систему." 
           ]
         }
-      ]
+      }
+    },
+    "download": {
+      "title": "Скачайте Auralis X",
+      "desc": "Установите Auralis X для Windows и подключите веб-консоль для удаленного администрирования.",
+      "releaseLabel": "Релизная версия",
+      "ctaWin": "Скачать для Windows",
+      "ctaDocs": "Документация",
+      "points": [
+        "Полный контроль безопасности без сложной настройки.",
+        "Обновления в реальном времени и облачная аналитика.",
+        "Интеграция с корпоративной инфраструктурой."
+      ],
+      "hashTitle": "Контрольная сумма",
+      "hashDesc": "Проверьте цифровую подпись перед установкой, чтобы подтвердить целостность пакета.",
+      "verify": "Как проверить подпись?"
+    },
+    "settings": {
+      "title": "Панель настроек",
+      "subtitle": "Включайте дополнительные модули и следите за своей сетью, когда вам это нужно.",
+      "ipToggle": {
+        "title": "Показать IP-адрес",
+        "desc": "Отображать внешний IP-адрес с динамическим обновлением и индикатором статуса сети."
+      },
+      "ipTitle": "Текущий IP",
+      "ipStatus": "Обновление",
+      "ipStatusReady": "Подключено",
+      "ipStatusError": "Ошибка соединения",
+      "ipNote": "Ваш IP обновляется каждый раз при включении блока. Запросы выполняются безопасно через HTTPS."
     },
     "footer": {
-      "mailToast": "\u041f\u043e\u0447\u0442\u0430: {mail}"
+      "mailToast": "Почта: {mail}"
     }
   },
   "en": {
     "meta": {
-      "title": "Auralis Antivirus",
-      "description": "Auralis Secure Antivirus web console: manage protection status, scans, and updates in real time."
+      "title": "Auralis X",
+      "description": "Auralis X web console: manage protection status, scans, and updates in real time."
     },
     "brand": {
-      "name": "Auralis Secure"
+      "nameAuralis": "Auralis",
+      "nameX": "X"
     },
     "splash": {
-      "loading": "Loading protection modules..."
+      "loading": "Loading protection modules…"
     },
     "nav": {
       "overview": "Overview",
       "protection": "Protection",
+      "modules": "Modules",
+      "testing": "Testing builds",
+      "guides": "Guides",
       "download": "Download",
       "settings": "Settings"
     },
     "hero": {
       "badge": "Always-on protection",
-      "title": "Auralis web interface for instant cyber security",
+      "title": "Auralis X web interface for quiet cyber security",
       "subtitle": "Monitor the health of your protection, launch scans, and follow threats in real time inside a futuristic console.",
       "ctaPrimary": "Download for Windows",
       "ctaSecondary": "Open dashboard",
@@ -250,7 +263,7 @@
     },
     "dashboard": {
       "title": "Security console",
-      "subtitle": "Control Auralis protection modules: instant scans, traffic monitoring, and updates with one click.",
+      "subtitle": "Control Auralis X protection modules: instant scans, traffic monitoring, and updates with one click.",
       "cards": {
         "scan": {
           "title": "Instant scan",
@@ -270,7 +283,7 @@
       }
     },
     "features": {
-      "title": "Auralis modules",
+      "title": "Auralis X modules",
       "subtitle": "A futuristic interface and advanced technology give precise control over every security detail.",
       "cards": [
         {
@@ -291,9 +304,76 @@
         }
       ]
     },
+    "testing": {
+      "title": "Testing builds",
+      "subtitle": "Pick a channel that matches your risk level — from stable to experimental.",
+      "note": "Tip: you can always switch back to Stable — see Guides.",
+      "cards": {
+        "alpha": {
+          "title": "Alpha",
+          "status": "Experimental",
+          "desc": "Experimental features. Unstable channel.",
+          "cta": "Join testing",
+          "warning": "Alpha builds may contain breaking changes. Use on a test machine."
+        },
+        "beta": {
+          "title": "Beta",
+          "status": "Testing",
+          "desc": "Pre-release testing before rollout.",
+          "cta": "Join testing",
+          "warning": "Beta is more stable than Alpha, but issues may still happen."
+        },
+        "stable": {
+          "title": "Build",
+          "status": "Stable",
+          "desc": "Recommended version for everyday protection.",
+          "cta": "Download"
+        }
+      }
+    },
+    "guides": {
+      "title": "Instructions / Guides",
+      "subtitle": "Short steps to install, verify, and manage Auralis X builds.",
+      "cards": {
+        "install": {
+          "title": "How to install Auralis X",
+          "steps": [
+            "Download the stable build from Download or Testing builds (Build).",
+            "Open file properties and make sure the source is trusted.",
+            "Run the installer as administrator and complete setup.",
+            "After installation, run the first scan and update signatures." 
+          ]
+        },
+        "verify": {
+          "title": "How to verify the file signature",
+          "steps": [
+            "Windows: right-click the file → Properties.",
+            "Open the “Digital Signatures” tab (if available).",
+            "Confirm the signature is valid and not corrupted.",
+            "If there is no signature — do not run the file, re-download from a trusted source." 
+          ]
+        },
+        "enableTesting": {
+          "title": "How to enable testing builds",
+          "steps": [
+            "Pick Beta or Alpha in Testing builds.",
+            "Install over your current version or into a separate folder (recommended for Alpha).",
+            "If you experience issues, rollback to Stable using the Rollback guide." 
+          ]
+        },
+        "rollback": {
+          "title": "How to rollback to stable",
+          "steps": [
+            "Uninstall Alpha/Beta via Apps & Features (or use the uninstaller).",
+            "Download Stable (Build) and reinstall.",
+            "Update signatures after install and run a full scan." 
+          ]
+        }
+      }
+    },
     "download": {
-      "title": "Download Auralis",
-      "desc": "Install Auralis Secure Antivirus for Windows and link the web console for remote administration.",
+      "title": "Download Auralis X",
+      "desc": "Install Auralis X for Windows and link the web console for remote administration.",
       "releaseLabel": "Release version",
       "ctaWin": "Download for Windows",
       "ctaDocs": "Documentation",
@@ -319,263 +399,210 @@
       "ipStatusError": "Connection error",
       "ipNote": "Your IP is refreshed each time the block is enabled. Requests are made securely over HTTPS."
     },
-    "updates": {
-      "status": {
-        "idle": "You have the latest version {version} installed.",
-        "checking": "Checking updates\u2026",
-        "current": "No updates found. You are running {version}.",
-        "available": "Update available! Latest version {remote}.",
-        "error": "Unable to check updates right now. Please try again later."
-      },
-      "label": {
-        "current": "Up to date",
-        "checking": "Checking\u2026",
-        "available": "Update available",
-        "error": "Error"
-      }
-    },
-    "changelog": {
-      "title": "Update history",
-      "subtitle": "Track how Auralis evolves with each release and explore the features delivered in every update.",
-      "items": [
-        {
-          "version": "v1.4.0",
-          "date": "2025-10-25",
-          "points": [
-            "Multilingual support (Russian, English, Ukrainian)",
-            "New visual design with animations",
-            "Animated protection shield with pulsing effect",
-            "Circular progress bars for monitoring",
-            "Particle system background",
-            "New \u201cStatistics\u201d tab with charts",
-            "Confetti effect after successful scan",
-            "Theme color switcher",
-            "Improved tab transitions",
-            "Detailed protection statistics",
-            "Interface visual refinements",
-            "Fixed IP detection module",
-            "Beautiful settings with animations"
-          ]
-        },
-        {
-          "version": "v1.2.0",
-          "date": "2025-10-15",
-          "points": [
-            "Added real system monitoring (CPU, RAM, GPU)",
-            "New \u201cAbout PC & Monitoring\u201d tab",
-            "Security warning system",
-            "Antivirus update history",
-            "Update checking utility",
-            "Improved stability and performance"
-          ]
-        },
-        {
-          "version": "v1.1.0",
-          "date": "2025-10-08",
-          "points": [
-            "Improved UI and added History tab",
-            "Added scan emulation",
-            "Autostart configuration",
-            "Export of scan history"
-          ]
-        }
-      ]
-    },
     "footer": {
       "mailToast": "Email: {mail}"
     }
   },
   "uk": {
     "meta": {
-      "title": "Auralis Antivirus",
-      "description": "\u0412\u0435\u0431-\u043a\u043e\u043d\u0441\u043e\u043b\u044c Auralis Secure Antivirus: \u043a\u0435\u0440\u0443\u0439\u0442\u0435 \u0441\u0442\u0430\u043d\u043e\u043c \u0437\u0430\u0445\u0438\u0441\u0442\u0443, \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f\u043c \u0456 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0456 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0447\u0430\u0441\u0443."
+      "title": "Auralis X",
+      "description": "Веб-консоль Auralis X: керування захистом, скануванням та оновленнями в режимі реального часу."
     },
     "brand": {
-      "name": "Auralis Secure"
+      "nameAuralis": "Auralis",
+      "nameX": "X"
     },
     "splash": {
-      "loading": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0435\u043d\u043d\u044f \u043c\u043e\u0434\u0443\u043b\u0456\u0432 \u0437\u0430\u0445\u0438\u0441\u0442\u0443..."
+      "loading": "Завантаження модулів захисту…"
     },
     "nav": {
-      "overview": "\u041e\u0433\u043b\u044f\u0434",
-      "protection": "\u0417\u0430\u0445\u0438\u0441\u0442",
-      "download": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0438\u0442\u0438",
-      "settings": "\u041d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f"
+      "overview": "Огляд",
+      "protection": "Захист",
+      "modules": "Модулі",
+      "testing": "Тестові збірки",
+      "guides": "Інструкції",
+      "download": "Завантажити",
+      "settings": "Налаштування"
     },
     "hero": {
-      "badge": "\u0417\u0430\u0432\u0436\u0434\u0438 \u0430\u043a\u0442\u0438\u0432\u043d\u0438\u0439 \u0437\u0430\u0445\u0438\u0441\u0442",
-      "title": "\u0412\u0435\u0431-\u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Auralis \u0434\u043b\u044f \u043c\u0438\u0442\u0442\u0454\u0432\u043e\u0457 \u043a\u0456\u0431\u0435\u0440\u0431\u0435\u0437\u043f\u0435\u043a\u0438",
-      "subtitle": "\u041c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u0437\u0434\u043e\u0440\u043e\u0432\u2019\u044f \u0432\u0430\u0448\u043e\u0433\u043e \u0437\u0430\u0445\u0438\u0441\u0442\u0443, \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u0438 \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0430 \u0441\u0442\u0435\u0436\u0438\u0442\u0438 \u0437\u0430 \u0437\u0430\u0433\u0440\u043e\u0437\u0430\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0456 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0447\u0430\u0441\u0443 \u0432\u0441\u0435\u0440\u0435\u0434\u0438\u043d\u0456 \u0444\u0443\u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u043d\u043e\u0457 \u043a\u043e\u043d\u0441\u043e\u043b\u0456.",
-      "ctaPrimary": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0438\u0442\u0438 \u0434\u043b\u044f Windows",
-      "ctaSecondary": "\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0430 \u0456\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0456\u0439\u043d\u0430 \u043f\u0430\u043d\u0435\u043b\u044c",
+      "badge": "Завжди активний захист",
+      "title": "Веб-інтерфейс Auralis X для тихої кібербезпеки",
+      "subtitle": "Відстежуйте стан захисту, запускайте сканування та спостерігайте за загрозами в реальному часі всередині футуристичної консолі.",
+      "ctaPrimary": "Завантажити для Windows",
+      "ctaSecondary": "Відкрити панель",
       "metrics": [
         {
           "value": "24/7",
-          "label": "\u0410\u043a\u0442\u0438\u0432\u043d\u0438\u0439 \u0437\u0430\u0445\u0438\u0441\u0442"
+          "label": "Активний захист"
         },
         {
           "value": "+100",
-          "label": "\u0417\u0430\u0433\u0440\u043e\u0437\u0438 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e"
+          "label": "Загроз заблоковано"
         },
         {
           "value": "4,8*",
-          "label": "\u041e\u0446\u0456\u043d\u043a\u0430 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447\u0430"
+          "label": "Оцінка користувачів"
         }
       ],
       "console": {
-        "statusLabel": "\u041c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u0441\u0438\u0441\u0442\u0435\u043c\u0438",
-        "statusValue": "\u041e\u043d\u043b\u0430\u0439\u043d",
-        "threats": "\u0417\u0430\u0433\u0440\u043e\u0437\u0438 \u0437\u0430\u0431\u043b\u043e\u043a\u043e\u0432\u0430\u043d\u043e",
-        "quarantine": "\u0412 \u043a\u0430\u0440\u0430\u043d\u0442\u0438\u043d",
-        "signature": "\u0411\u0430\u0437\u0430 \u043f\u0456\u0434\u043f\u0438\u0441\u0456\u0432",
-        "signatureVersion": "v1.4.0 | \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043e 5 \u0445\u0432\u0438\u043b\u0438\u043d \u0442\u043e\u043c\u0443",
-        "fps": "\u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f",
+        "statusLabel": "Моніторинг системи",
+        "statusValue": "Онлайн",
+        "threats": "Загроз заблоковано",
+        "quarantine": "У карантині",
+        "signature": "База підписів",
+        "signatureVersion": "v1.4.0 | оновлено 5 хвилин тому",
+        "fps": "Частота оновлення",
         "fpsUnit": "fps",
-        "memory": "JS-\u043f\u0430\u043c\u02bc\u044f\u0442\u044c",
-        "memoryUnit": "\u041c\u0411",
-        "network": "\u041c\u0435\u0440\u0435\u0436\u0435\u0432\u0430 \u0437\u0430\u0442\u0440\u0438\u043c\u043a\u0430",
-        "networkUnit": "\u043c\u0441",
-        "networkUnitAlt": "\u041c\u0431\u0456\u0442/\u0441",
-        "networkOffline": "\u043e\u0444\u043b\u0430\u0439\u043d",
-        "networkFallback": "\u043e\u043d\u043b\u0430\u0439\u043d",
+        "memory": "JS-памʼять",
+        "memoryUnit": "МБ",
+        "network": "Мережева затримка",
+        "networkUnit": "мс",
+        "networkUnitAlt": "Мбіт/с",
+        "networkOffline": "офлайн",
+        "networkFallback": "онлайн",
         "monitorUnavailable": "--"
       }
     },
     "dashboard": {
-      "title": "\u041a\u043e\u043d\u0441\u043e\u043b\u044c \u0431\u0435\u0437\u043f\u0435\u043a\u0438",
-      "subtitle": "\u041a\u0435\u0440\u0443\u0439\u0442\u0435 \u043c\u043e\u0434\u0443\u043b\u044f\u043c\u0438 \u0437\u0430\u0445\u0438\u0441\u0442\u0443 Auralis: \u043c\u0438\u0442\u0442\u0454\u0432\u0435 \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f, \u043c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u0442\u0440\u0430\u0444\u0456\u043a\u0443 \u0442\u0430 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u043e\u0434\u043d\u0438\u043c \u043a\u043b\u0430\u0446\u0430\u043d\u043d\u044f\u043c \u043c\u0438\u0448\u0456.",
+      "title": "Консоль безпеки",
+      "subtitle": "Керуйте модулями захисту Auralis X: миттєве сканування, моніторинг трафіку та оновлення одним кліком.",
       "cards": {
         "scan": {
-          "title": "\u041c\u0438\u0442\u0442\u0454\u0432\u0435 \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f",
-          "desc": "\u0410\u043d\u0430\u043b\u0456\u0437\u0443\u0439\u0442\u0435 \u0444\u0430\u0439\u043b\u0438 \u0442\u0430 \u043f\u0430\u043c\u2019\u044f\u0442\u044c \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u0445\u043c\u0430\u0440\u043d\u0438\u0445 \u0441\u0438\u0433\u043d\u0430\u0442\u0443\u0440 \u0456 \u0435\u0432\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0448\u0442\u0443\u0447\u043d\u043e\u0433\u043e \u0456\u043d\u0442\u0435\u043b\u0435\u043a\u0442\u0443, \u0449\u043e\u0431 \u0443\u043b\u043e\u0432\u043b\u044e\u0432\u0430\u0442\u0438 \u0437\u0430\u0433\u0440\u043e\u0437\u0438 \u043d\u0443\u043b\u044c\u043e\u0432\u043e\u0433\u043e \u0434\u043d\u044f.",
-          "action": "\u041f\u043e\u0447\u0430\u0442\u0438 \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f"
+          "title": "Миттєве сканування",
+          "desc": "Аналізуйте файли та памʼять із хмарними сигнатурами й евристикою, щоб виявляти загрози нульового дня.",
+          "action": "Почати сканування"
         },
         "network": {
-          "title": "\u041c\u0435\u0440\u0435\u0436\u0435\u0432\u0438\u0439 \u0449\u0438\u0442",
-          "desc": "\u0424\u0456\u043b\u044c\u0442\u0440\u0443\u0439\u0442\u0435 \u0442\u0440\u0430\u0444\u0456\u043a \u0456 \u0431\u043b\u043e\u043a\u0443\u0439\u0442\u0435 \u0444\u0456\u0448\u0438\u043d\u0433 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u043f\u043e\u0432\u0435\u0434\u0456\u043d\u043a\u043e\u0432\u043e\u0457 \u0430\u043d\u0430\u043b\u0456\u0442\u0438\u043a\u0438 \u0442\u0430 \u043f\u0440\u0430\u0432\u0438\u043b\u0430 \u0441\u0430\u043c\u043e\u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f.",
-          "metric": "\u041c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u043f\u0456\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u044c"
+          "title": "Мережевий щит",
+          "desc": "Фільтруйте трафік і блокуйте фішинг за допомогою поведінкової аналітики та правил самооновлення.",
+          "metric": "Підключень під контролем"
         },
         "update": {
-          "title": "\u0426\u0435\u043d\u0442\u0440 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f",
-          "desc": "\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u044f\u0439\u0442\u0435 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u0432 \u043d\u0430\u0448\u043e\u043c\u0443 \u0430\u043d\u0442\u0438\u0432\u0456\u0440\u0443\u0441\u0456 \u0442\u0430 \u043c\u0438\u0442\u0442\u0454\u0432\u043e \u043e\u043d\u043e\u0432\u043b\u044e\u0439\u0442\u0435 \u0441\u0438\u0433\u043d\u0430\u0442\u0443\u0440\u0438 \u0434\u043b\u044f \u043f\u043e\u0441\u0438\u043b\u0435\u043d\u043e\u0457 \u0431\u0435\u0437\u043f\u0435\u043a\u0438.",
-          "status": "\u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e"
+          "title": "Центр оновлень",
+          "desc": "Перевіряйте оновлення та миттєво оновлюйте сигнатури, щоб залишатися попереду.",
+          "status": "Актуально"
         }
       }
     },
     "features": {
-      "title": "\u041c\u043e\u0434\u0443\u043b\u0456 Auralis",
-      "subtitle": "\u0424\u0443\u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u043d\u0438\u0439 \u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u0456 \u043f\u0435\u0440\u0435\u0434\u043e\u0432\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457 \u0437\u0430\u0431\u0435\u0437\u043f\u0435\u0447\u0443\u044e\u0442\u044c \u0442\u043e\u0447\u043d\u0438\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u043d\u0430\u0434 \u043a\u043e\u0436\u043d\u043e\u044e \u0434\u0435\u0442\u0430\u043b\u043b\u044e \u0431\u0435\u0437\u043f\u0435\u043a\u0438.",
+      "title": "Модулі Auralis X",
+      "subtitle": "Футуристичний інтерфейс та технології дають точний контроль над кожною деталлю безпеки.",
       "cards": [
         {
-          "title": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0446\u0456\u043b\u0456\u0441\u043d\u043e\u0441\u0442\u0456",
-          "desc": "\u041c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u043a\u0440\u0438\u0442\u0438\u0447\u043d\u0438\u0445 \u0444\u0430\u0439\u043b\u0456\u0432 \u0456 \u043a\u043b\u044e\u0447\u0456\u0432 \u0440\u0435\u0454\u0441\u0442\u0440\u0443 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u043c\u0438\u0442\u0442\u0454\u0432\u0438\u0445 \u0441\u043f\u043e\u0432\u0456\u0449\u0435\u043d\u044c \u0456 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e\u0433\u043e \u0432\u0456\u0434\u043a\u043e\u0442\u0443."
+          "title": "Контроль цілісності",
+          "desc": "Моніторинг критичних файлів і ключів реєстру з миттєвими сповіщеннями та авто-відкотом."
         },
         {
-          "title": "\u0406\u0437\u043e\u043b\u044c\u043e\u0432\u0430\u043d\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043d\u0435 \u0441\u0435\u0440\u0435\u0434\u043e\u0432\u0438\u0449\u0435",
-          "desc": "\u0417\u0430\u043f\u0443\u0441\u043a \u043f\u0456\u0434\u043e\u0437\u0440\u0456\u043b\u0438\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c \u0443 \u0437\u0430\u0445\u0438\u0449\u0435\u043d\u043e\u043c\u0443 \u0441\u0435\u0440\u0435\u0434\u043e\u0432\u0438\u0449\u0456 \u0431\u0435\u0437 \u0440\u0438\u0437\u0438\u043a\u0443 \u0434\u043b\u044f \u043e\u0441\u043d\u043e\u0432\u043d\u043e\u0457 \u0441\u0438\u0441\u0442\u0435\u043c\u0438."
+          "title": "Ізольоване середовище",
+          "desc": "Запускайте підозрілі програми у захищеному середовищі без ризику для основної системи."
         },
         {
-          "title": "\u0417\u0430\u0445\u0438\u0441\u0442 \u0434\u0430\u043d\u0438\u0445",
-          "desc": "\u0428\u0438\u0444\u0440\u0443\u0439\u0442\u0435 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u0456 \u0444\u0430\u0439\u043b\u0438 \u0442\u0430 \u0437\u0430\u0445\u0438\u0449\u0430\u0439\u0442\u0435 \u0432\u0456\u0434 \u043f\u0440\u043e\u0433\u0440\u0430\u043c-\u0432\u0438\u043c\u0430\u0433\u0430\u0447\u0456\u0432 \u0437\u0430 \u0434\u043e\u043f\u043e\u043c\u043e\u0433\u043e\u044e \u0431\u0430\u0433\u0430\u0442\u043e\u0440\u0456\u0432\u043d\u0435\u0432\u0438\u0445 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u0438\u0445 \u043a\u043e\u043f\u0456\u0439."
+          "title": "Захист даних",
+          "desc": "Шифруйте конфіденційні файли та протидійте ransomware за допомогою багаторівневих резервних копій."
         },
         {
-          "title": "\u041c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u0456",
-          "desc": "\u0410\u043d\u0430\u043b\u0456\u0437\u0443\u0439\u0442\u0435 \u0437\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0435\u043d\u043d\u044f \u043c\u043e\u0434\u0443\u043b\u044f, \u043e\u0442\u0440\u0438\u043c\u0443\u0439\u0442\u0435 \u043f\u0456\u0434\u043a\u0430\u0437\u043a\u0438 \u0449\u043e\u0434\u043e \u043e\u043f\u0442\u0438\u043c\u0456\u0437\u0430\u0446\u0456\u0457 \u0442\u0430 \u0432\u043c\u0438\u043a\u0430\u0439\u0442\u0435 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u0438\u0439 \u0435\u043a\u043e-\u0440\u0435\u0436\u0438\u043c."
+          "title": "Моніторинг продуктивності",
+          "desc": "Аналізуйте навантаження модулів, отримуйте підказки щодо оптимізації та вмикайте eco-режим."
         }
       ]
     },
-    "download": {
-      "title": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0442\u0435 Auralis",
-      "desc": "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0456\u0442\u044c Auralis Secure Antivirus \u0434\u043b\u044f Windows \u0456 \u0437\u0432\u2019\u044f\u0436\u0456\u0442\u044c \u0432\u0435\u0431-\u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0434\u043b\u044f \u0432\u0456\u0434\u0434\u0430\u043b\u0435\u043d\u043e\u0433\u043e \u0430\u0434\u043c\u0456\u043d\u0456\u0441\u0442\u0440\u0443\u0432\u0430\u043d\u043d\u044f.",
-      "releaseLabel": "\u0412\u0438\u043f\u0443\u0441\u043a \u0432\u0435\u0440\u0441\u0456\u044f",
-      "ctaWin": "\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0438\u0442\u0438 \u0434\u043b\u044f Windows",
-      "ctaDocs": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0456\u044f",
-      "points": [
-        "\u041f\u043e\u0432\u043d\u0438\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0431\u0435\u0437\u043f\u0435\u043a\u0438 \u0431\u0435\u0437 \u0441\u043a\u043b\u0430\u0434\u043d\u043e\u0457 \u043a\u043e\u043d\u0444\u0456\u0433\u0443\u0440\u0430\u0446\u0456\u0457.",
-        "\u041e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u0447\u0430\u0441\u0456 \u0442\u0430 \u0445\u043c\u0430\u0440\u043d\u0430 \u0430\u043d\u0430\u043b\u0456\u0442\u0438\u043a\u0430.",
-        "\u0406\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0456\u044f \u0437 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u044e \u0456\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u043e\u044e."
-      ],
-      "hashTitle": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c\u043d\u0430 \u0441\u0443\u043c\u0430",
-      "hashDesc": "\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u0442\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u0438\u0439 \u043f\u0456\u0434\u043f\u0438\u0441 \u043f\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u043e\u044e, \u0449\u043e\u0431 \u043f\u0456\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0438 \u0446\u0456\u043b\u0456\u0441\u043d\u0456\u0441\u0442\u044c \u043f\u0430\u043a\u0435\u0442\u0430.",
-      "verify": "\u042f\u043a \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u0438\u0442\u0438 \u043f\u0456\u0434\u043f\u0438\u0441?"
-    },
-    "settings": {
-      "title": "\u041f\u0430\u043d\u0435\u043b\u044c \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u044c",
-      "subtitle": "\u0423\u0432\u0456\u043c\u043a\u043d\u0456\u0442\u044c \u0434\u043e\u0434\u0430\u0442\u043a\u043e\u0432\u0456 \u043c\u043e\u0434\u0443\u043b\u0456 \u0442\u0430 \u0441\u0442\u0435\u0436\u0442\u0435 \u0437\u0430 \u0441\u0432\u043e\u0454\u044e \u043c\u0435\u0440\u0435\u0436\u0435\u044e, \u043a\u043e\u043b\u0438 \u0432\u0430\u043c \u0446\u0435 \u043f\u043e\u0442\u0440\u0456\u0431\u043d\u043e.",
-      "ipToggle": {
-        "title": "\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u0438 IP-\u0430\u0434\u0440\u0435\u0441\u0443",
-        "desc": "\u0412\u0456\u0434\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u043d\u044f \u0437\u043e\u0432\u043d\u0456\u0448\u043d\u044c\u043e\u0457 IP-\u0430\u0434\u0440\u0435\u0441\u0438 \u0437 \u0434\u0438\u043d\u0430\u043c\u0456\u0447\u043d\u0438\u043c \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f\u043c \u0456 \u0432\u0456\u0437\u0443\u0430\u043b\u044c\u043d\u0438\u043c \u0456\u043d\u0434\u0438\u043a\u0430\u0442\u043e\u0440\u043e\u043c \u0441\u0442\u0430\u043d\u0443 \u043c\u0435\u0440\u0435\u0436\u0456."
-      },
-      "ipTitle": "\u041f\u043e\u0442\u043e\u0447\u043d\u0430 IP-\u0430\u0434\u0440\u0435\u0441\u0430",
-      "ipStatus": "\u041e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f",
-      "ipStatusReady": "\u041f\u0456\u0434\u2019\u0454\u0434\u043d\u0430\u043d\u043e",
-      "ipStatusError": "\u041f\u043e\u043c\u0438\u043b\u043a\u0430 \u0437\u2019\u0454\u0434\u043d\u0430\u043d\u043d\u044f",
-      "ipNote": "\u0412\u0430\u0448\u0430 IP-\u0430\u0434\u0440\u0435\u0441\u0430 \u043e\u043d\u043e\u0432\u043b\u044e\u0454\u0442\u044c\u0441\u044f \u043a\u043e\u0436\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0443, \u043a\u043e\u043b\u0438 \u0432\u043c\u0438\u043a\u0430\u0454\u0442\u044c\u0441\u044f \u0431\u043b\u043e\u043a\u0443\u0432\u0430\u043d\u043d\u044f. \u0417\u0430\u043f\u0438\u0442\u0438 \u043d\u0430\u0434\u0441\u0438\u043b\u0430\u044e\u0442\u044c\u0441\u044f \u0431\u0435\u0437\u043f\u0435\u0447\u043d\u043e \u0447\u0435\u0440\u0435\u0437 HTTPS."
-    },
-    "updates": {
-      "status": {
-        "idle": "\u0423 \u0432\u0430\u0441 \u0432\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u0430 \u0432\u0435\u0440\u0441\u0456\u044f {version}.",
-        "checking": "\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u044f\u0454\u043c\u043e \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f\u2026",
-        "current": "\u041e\u043d\u043e\u0432\u043b\u0435\u043d\u044c \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e. \u041f\u043e\u0442\u043e\u0447\u043d\u0430 \u0432\u0435\u0440\u0441\u0456\u044f {version}.",
-        "available": "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u0435 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f! \u041d\u043e\u0432\u0430 \u0432\u0435\u0440\u0441\u0456\u044f {remote}.",
-        "error": "\u041d\u0435 \u0432\u0434\u0430\u043b\u043e\u0441\u044f \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u0438\u0442\u0438 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f. \u0421\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u043f\u0456\u0437\u043d\u0456\u0448\u0435."
-      },
-      "label": {
-        "current": "\u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e",
-        "checking": "\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430\u2026",
-        "available": "\u0404 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u044f",
-        "error": "\u041f\u043e\u043c\u0438\u043b\u043a\u0430"
+    "testing": {
+      "title": "Тестові збірки",
+      "subtitle": "Обирайте канал за рівнем ризику — від стабільного до експериментального.",
+      "note": "Порада: ви завжди можете повернутися на Stable — дивіться Інструкції.",
+      "cards": {
+        "alpha": {
+          "title": "Alpha",
+          "status": "Experimental",
+          "desc": "Експериментальні функції. Нестабільна збірка.",
+          "cta": "Приєднатися",
+          "warning": "Alpha може містити критичні помилки. Використовуйте на тестовій системі."
+        },
+        "beta": {
+          "title": "Beta",
+          "status": "Testing",
+          "desc": "Тестування перед релізом.",
+          "cta": "Приєднатися",
+          "warning": "Beta зазвичай стабільніша за Alpha, але проблеми можливі."
+        },
+        "stable": {
+          "title": "Build",
+          "status": "Stable",
+          "desc": "Рекомендована версія для щоденного захисту.",
+          "cta": "Завантажити"
+        }
       }
     },
-    "changelog": {
-      "title": "\u0406\u0441\u0442\u043e\u0440\u0456\u044f \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u044c",
-      "subtitle": "\u0421\u0442\u0435\u0436\u0442\u0435 \u0437\u0430 \u0440\u043e\u0437\u0432\u0438\u0442\u043a\u043e\u043c Auralis \u0443 \u043a\u043e\u0436\u043d\u043e\u043c\u0443 \u0440\u0435\u043b\u0456\u0437\u0456 \u0442\u0430 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434\u0430\u0439\u0442\u0435 \u043c\u043e\u0436\u043b\u0438\u0432\u043e\u0441\u0442\u0456 \u043a\u043e\u0436\u043d\u043e\u0457 \u0432\u0435\u0440\u0441\u0456\u0457.",
-      "items": [
-        {
-          "version": "v1.4.0",
-          "date": "2025-10-25",
-          "points": [
-            "\u0411\u0430\u0433\u0430\u0442\u043e\u043c\u043e\u0432\u043d\u0430 \u043f\u0456\u0434\u0442\u0440\u0438\u043c\u043a\u0430 (\u0440\u043e\u0441\u0456\u0439\u0441\u044c\u043a\u0430, \u0430\u043d\u0433\u043b\u0456\u0439\u0441\u044c\u043a\u0430, \u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430)",
-            "\u041d\u043e\u0432\u0438\u0439 \u0432\u0456\u0437\u0443\u0430\u043b\u044c\u043d\u0438\u0439 \u0434\u0438\u0437\u0430\u0439\u043d \u0437 \u0430\u043d\u0456\u043c\u0430\u0446\u0456\u044f\u043c\u0438",
-            "\u0410\u043d\u0456\u043c\u043e\u0432\u0430\u043d\u0438\u0439 \u0449\u0438\u0442 \u0437\u0430\u0445\u0438\u0441\u0442\u0443 \u0437 \u043f\u0443\u043b\u044c\u0441\u0430\u0446\u0456\u0454\u044e",
-            "\u041a\u0440\u0443\u0433\u043e\u0432\u0456 \u0456\u043d\u0434\u0438\u043a\u0430\u0442\u043e\u0440\u0438 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0443 \u0434\u043b\u044f \u043c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433\u0443",
-            "\u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u0447\u0430\u0441\u0442\u0438\u043d\u043e\u043a \u043d\u0430 \u0442\u043b\u0456",
-            "\u041d\u043e\u0432\u0430 \u0432\u043a\u043b\u0430\u0434\u043a\u0430 \u00ab\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430\u00bb \u0437 \u0433\u0440\u0430\u0444\u0456\u043a\u0430\u043c\u0438",
-            "\u0415\u0444\u0435\u043a\u0442 \u043a\u043e\u043d\u0444\u0435\u0442\u0442\u0456 \u043f\u0456\u0441\u043b\u044f \u0443\u0441\u043f\u0456\u0448\u043d\u043e\u0433\u043e \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f",
-            "\u041f\u0435\u0440\u0435\u043c\u0438\u043a\u0430\u0447 \u043a\u043e\u043b\u044c\u043e\u0440\u043e\u0432\u0438\u0445 \u0442\u0435\u043c",
-            "\u041f\u043e\u043b\u0456\u043f\u0448\u0435\u043d\u0456 \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0438 \u043c\u0456\u0436 \u0432\u043a\u043b\u0430\u0434\u043a\u0430\u043c\u0438",
-            "\u0414\u0435\u0442\u0430\u043b\u044c\u043d\u0430 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0437\u0430\u0445\u0438\u0441\u0442\u0443",
-            "\u0412\u0456\u0437\u0443\u0430\u043b\u044c\u043d\u0456 \u0432\u0434\u043e\u0441\u043a\u043e\u043d\u0430\u043b\u0435\u043d\u043d\u044f \u0456\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0443",
-            "\u0412\u0438\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0430 \u0444\u0443\u043d\u043a\u0446\u0456\u044f \u0432\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f IP",
-            "\u0421\u0442\u0438\u043b\u044c\u043d\u0456 \u043d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0437 \u0430\u043d\u0456\u043c\u0430\u0446\u0456\u044f\u043c\u0438"
+    "guides": {
+      "title": "Instructions / Guides",
+      "subtitle": "Короткі кроки для встановлення, перевірки та керування збірками Auralis X.",
+      "cards": {
+        "install": {
+          "title": "Як встановити Auralis X",
+          "steps": [
+            "Завантажте стабільну збірку у Download або Testing builds (Build).",
+            "Відкрийте властивості файлу та переконайтеся, що джерело довірене.",
+            "Запустіть інсталятор від імені адміністратора та завершіть встановлення.",
+            "Після встановлення запустіть перше сканування та оновіть бази." 
           ]
         },
-        {
-          "version": "v1.2.0",
-          "date": "2025-10-15",
-          "points": [
-            "\u0414\u043e\u0434\u0430\u043d\u043e \u0440\u0435\u0430\u043b\u044c\u043d\u0438\u0439 \u043c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433 \u0441\u0438\u0441\u0442\u0435\u043c\u0438 (CPU, RAM, GPU)",
-            "\u041d\u043e\u0432\u0430 \u0432\u043a\u043b\u0430\u0434\u043a\u0430 \u00ab\u041f\u0440\u043e \u041f\u041a \u0442\u0430 \u043c\u043e\u043d\u0456\u0442\u043e\u0440\u0438\u043d\u0433\u00bb",
-            "\u0421\u0438\u0441\u0442\u0435\u043c\u0430 \u043f\u043e\u043f\u0435\u0440\u0435\u0434\u0436\u0435\u043d\u044c \u0431\u0435\u0437\u043f\u0435\u043a\u0438",
-            "\u0406\u0441\u0442\u043e\u0440\u0456\u044f \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u044c \u0430\u043d\u0442\u0438\u0432\u0456\u0440\u0443\u0441\u0443",
-            "\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430 \u043e\u043d\u043e\u0432\u043b\u0435\u043d\u044c",
-            "\u041f\u043e\u043b\u0456\u043f\u0448\u0435\u043d\u0430 \u0441\u0442\u0430\u0431\u0456\u043b\u044c\u043d\u0456\u0441\u0442\u044c \u0442\u0430 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0438\u0432\u043d\u0456\u0441\u0442\u044c"
+        "verify": {
+          "title": "Як перевірити підпис файлу",
+          "steps": [
+            "Windows: натисніть правою кнопкою по файлу → Властивості.",
+            "Відкрийте вкладку “Цифрові підписи” (якщо доступно).",
+            "Переконайтеся, що підпис дійсний і не пошкоджений.",
+            "Якщо підпису немає — не запускайте файл і завантажте знову з довіреного джерела." 
           ]
         },
-        {
-          "version": "v1.1.0",
-          "date": "2025-10-08",
-          "points": [
-            "\u041e\u043d\u043e\u0432\u043b\u0435\u043d\u043e UI \u0442\u0430 \u0434\u043e\u0434\u0430\u043d\u043e \u0432\u043a\u043b\u0430\u0434\u043a\u0443 \u00ab\u0406\u0441\u0442\u043e\u0440\u0456\u044f\u00bb",
-            "\u0414\u043e\u0434\u0430\u043d\u043e \u0435\u043c\u0443\u043b\u044f\u0446\u0456\u044e \u0441\u043a\u0430\u043d\u0443\u0432\u0430\u043d\u043d\u044f",
-            "\u041d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0430\u0432\u0442\u043e\u0437\u0430\u043f\u0443\u0441\u043a\u0443",
-            "\u0415\u043a\u0441\u043f\u043e\u0440\u0442 \u0456\u0441\u0442\u043e\u0440\u0456\u0457 \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u043e\u043a"
+        "enableTesting": {
+          "title": "Як увімкнути тестові збірки",
+          "steps": [
+            "Оберіть Beta або Alpha у Testing builds.",
+            "Встановіть поверх поточної версії або у окрему папку (краще для Alpha).",
+            "Якщо є проблеми — поверніться на Stable за інструкцією Rollback." 
+          ]
+        },
+        "rollback": {
+          "title": "Як повернутися на стабільну версію",
+          "steps": [
+            "Видаліть Alpha/Beta через “Програми” (або деінсталятор).",
+            "Завантажте Stable (Build) та встановіть знову.",
+            "Оновіть бази після встановлення та запустіть повне сканування." 
           ]
         }
-      ]
+      }
+    },
+    "download": {
+      "title": "Завантажити Auralis X",
+      "desc": "Встановіть Auralis X для Windows та підʼєднайте веб-консоль для віддаленого адміністрування.",
+      "releaseLabel": "Випуск версії",
+      "ctaWin": "Завантажити для Windows",
+      "ctaDocs": "Документація",
+      "points": [
+        "Повний контроль безпеки без складної конфігурації.",
+        "Оновлення в реальному часі та хмарна аналітика.",
+        "Інтеграція з корпоративною інфраструктурою."
+      ],
+      "hashTitle": "Контрольна сума",
+      "hashDesc": "Перевірте цифровий підпис перед встановленням, щоб підтвердити цілісність пакета.",
+      "verify": "Як перевірити підпис?"
+    },
+    "settings": {
+      "title": "Панель налаштувань",
+      "subtitle": "Увімкніть додаткові модулі та стежте за мережею, коли вам це потрібно.",
+      "ipToggle": {
+        "title": "Показати IP-адресу",
+        "desc": "Відображення зовнішньої IP-адреси з динамічним оновленням та індикатором стану мережі."
+      },
+      "ipTitle": "Поточна IP-адреса",
+      "ipStatus": "Оновлення",
+      "ipStatusReady": "Підʼєднано",
+      "ipStatusError": "Помилка зʼєднання",
+      "ipNote": "Ваша IP-адреса оновлюється кожного разу, коли вмикається блок. Запити надсилаються безпечно через HTTPS."
     },
     "footer": {
-      "mailToast": "\u041f\u043e\u0448\u0442\u0430: {mail}"
+      "mailToast": "Пошта: {mail}"
     }
   }
 }
