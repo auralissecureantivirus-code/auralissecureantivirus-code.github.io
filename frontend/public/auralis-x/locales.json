@@ -90,7 +90,13 @@
         },
         {
           "title": "Разные проверки",
-          "desc": "Комплексная проверка безопасности системы, сети, серверов и облачных сервисов."
+          "desc": "Комплексная проверка безопасности системы, сети, серверов и облачных сервисов.",
+          "items": [
+            "AI Scan — поиск скрытых и неизвестных угроз с помощью ИИ.",
+            "Network Scan — анализ сети и подключений.",
+            "Server Scan — проверка серверов на уязвимости.",
+            "Cloud Scan — контроль безопасности облачных ресурсов."
+          ]
         },
         {
           "title": "Защита данных",
@@ -105,7 +111,7 @@
     "testing": {
       "title": "Тестирование версий",
       "subtitle": "Выберите канал по уровню риска — от стабильной сборки до экспериментальной.",
-      "note": "Подсказка: на Stable можно вернуться в любой момент — смотрите Инструкции.",
+      "note": "Подсказка: на Release можно вернуться в любой момент — смотрите Инструкции.",
       "cards": {
         "alpha": {
           "title": "Alpha",
@@ -136,10 +142,10 @@
         "install": {
           "title": "Как установить Auralis X",
           "steps": [
-            "Скачайте стабильную сборку в разделе Download или Testing builds (Build).",
+            "Скачайте релизную сборку в разделе Download или Testing builds (Release).",
             "Откройте свойства файла и убедитесь, что источник загрузки вам доверен.",
             "Запустите установщик от имени администратора и завершите установку.",
-            "После установки выполните первую проверку и обновите базы." 
+            "После установки выполните первую проверку и обновите базы."
           ]
         },
         "verify": {
@@ -148,7 +154,7 @@
             "Windows: кликните правой кнопкой по файлу → Свойства.",
             "Откройте вкладку “Цифровые подписи” (если доступно).",
             "Проверьте, что подпись действительна и не повреждена.",
-            "Если подписи нет — не запускайте файл и скачайте заново из доверенного источника." 
+            "Если подписи нет — не запускайте файл и скачайте заново из доверенного источника."
           ]
         },
         "enableTesting": {
@@ -156,15 +162,15 @@
           "steps": [
             "Выберите Beta или Alpha в разделе Testing builds.",
             "Установите поверх текущей версии или в отдельную папку (рекомендуется для Alpha).",
-            "При проблемах вернитесь на Stable по инструкции “Rollback”." 
+            "При проблемах вернитесь на Release по инструкции “Rollback”."
           ]
         },
         "rollback": {
-          "title": "Как откатиться на стабильную версию",
+          "title": "Как откатиться на релизную версию",
           "steps": [
             "Удалите Alpha/Beta через “Приложения и компоненты” (или используйте деинсталлятор).",
-            "Скачайте Stable (Build) и установите заново.",
-            "После установки обновите базы и проверьте систему." 
+            "Скачайте Release и установите заново.",
+            "После установки обновите базы и проверьте систему."
           ]
         }
       }
@@ -176,13 +182,6 @@
       "ctaWin": "Скачать для Windows",
       "ctaDocs": "Документация",
       "points": [
-,
-          "items": [
-            "AI Scan — поиск скрытых и неизвестных угроз с помощью ИИ.",
-            "Network Scan — анализ сети и подключений.",
-            "Server Scan — проверка серверов на уязвимости.",
-            "Cloud Scan — контроль безопасности облачных ресурсов."
-          ]
         "Полный контроль безопасности без сложной настройки.",
         "Обновления в реальном времени и облачная аналитика.",
         "Интеграция с корпоративной инфраструктурой."
@@ -299,7 +298,13 @@
         },
         {
           "title": "Multi scans",
-          "desc": "Comprehensive security scanning for system, network, servers, and cloud."
+          "desc": "Comprehensive security scanning for system, network, servers, and cloud.",
+          "items": [
+            "AI Scan — detect hidden and unknown threats with AI.",
+            "Network Scan — analyse network and connections.",
+            "Server Scan — check servers for vulnerabilities.",
+            "Cloud Scan — monitor cloud resource security."
+          ]
         },
         {
           "title": "Data protection",
@@ -314,7 +319,7 @@
     "testing": {
       "title": "Testing builds",
       "subtitle": "Pick a channel that matches your risk level — from stable to experimental.",
-      "note": "Tip: you can always switch back to Stable — see Guides.",
+      "note": "Tip: you can always switch back to Release — see Guides.",
       "cards": {
         "alpha": {
           "title": "Alpha",
@@ -345,10 +350,10 @@
         "install": {
           "title": "How to install Auralis X",
           "steps": [
-            "Download the stable build from Download or Testing builds (Build).",
+            "Download the release build from Download or Testing builds (Release).",
             "Open file properties and make sure the source is trusted.",
             "Run the installer as administrator and complete setup.",
-            "After installation, run the first scan and update signatures." 
+            "After installation, run the first scan and update signatures."
           ]
         },
         "verify": {
@@ -357,7 +362,7 @@
             "Windows: right-click the file → Properties.",
             "Open the “Digital Signatures” tab (if available).",
             "Confirm the signature is valid and not corrupted.",
-            "If there is no signature — do not run the file, re-download from a trusted source." 
+            "If there is no signature — do not run the file, re-download from a trusted source."
           ]
         },
         "enableTesting": {
@@ -365,24 +370,17 @@
           "steps": [
             "Pick Beta or Alpha in Testing builds.",
             "Install over your current version or into a separate folder (recommended for Alpha).",
-            "If you experience issues, rollback to Stable using the Rollback guide." 
+            "If you experience issues, rollback to Release using the Rollback guide."
           ]
         },
         "rollback": {
-          "title": "How to rollback to stable",
+          "title": "How to rollback to release",
           "steps": [
             "Uninstall Alpha/Beta via Apps & Features (or use the uninstaller).",
-            "Download Stable (Build) and reinstall.",
-            "Update signatures after install and run a full scan." 
+            "Download Release and reinstall.",
+            "Update signatures after install and run a full scan."
           ]
         }
-,
-          "items": [
-            "AI Scan — detect hidden and unknown threats with AI.",
-            "Network Scan — analyse network and connections.",
-            "Server Scan — check servers for vulnerabilities.",
-            "Cloud Scan — monitor cloud resource security."
-          ]
       }
     },
     "download": {
@@ -508,7 +506,13 @@
         },
         {
           "title": "Різні перевірки",
-          "desc": "Комплексна перевірка безпеки системи, мережі, серверів та хмарних сервісів."
+          "desc": "Комплексна перевірка безпеки системи, мережі, серверів та хмарних сервісів.",
+          "items": [
+            "AI Scan — пошук прихованих і невідомих загроз за допомогою ШІ.",
+            "Network Scan — аналіз мережі та підключень.",
+            "Server Scan — перевірка серверів на вразливості.",
+            "Cloud Scan — контроль безпеки хмарних ресурсів."
+          ]
         },
         {
           "title": "Захист даних",
@@ -523,7 +527,7 @@
     "testing": {
       "title": "Тестові збірки",
       "subtitle": "Обирайте канал за рівнем ризику — від стабільного до експериментального.",
-      "note": "Порада: ви завжди можете повернутися на Stable — дивіться Інструкції.",
+      "note": "Порада: ви завжди можете повернутися на Release — дивіться Інструкції.",
       "cards": {
         "alpha": {
           "title": "Alpha",
@@ -554,10 +558,10 @@
         "install": {
           "title": "Як встановити Auralis X",
           "steps": [
-            "Завантажте стабільну збірку у Download або Testing builds (Build).",
+            "Завантажте релізну збірку у Download або Testing builds (Release).",
             "Відкрийте властивості файлу та переконайтеся, що джерело довірене.",
             "Запустіть інсталятор від імені адміністратора та завершіть встановлення.",
-            "Після встановлення запустіть перше сканування та оновіть бази." 
+            "Після встановлення запустіть перше сканування та оновіть бази."
           ]
         },
         "verify": {
@@ -566,7 +570,7 @@
             "Windows: натисніть правою кнопкою по файлу → Властивості.",
             "Відкрийте вкладку “Цифрові підписи” (якщо доступно).",
             "Переконайтеся, що підпис дійсний і не пошкоджений.",
-            "Якщо підпису немає — не запускайте файл і завантажте знову з довіреного джерела." 
+            "Якщо підпису немає — не запускайте файл і завантажте знову з довіреного джерела."
           ]
         },
         "enableTesting": {
@@ -574,22 +578,15 @@
           "steps": [
             "Оберіть Beta або Alpha у Testing builds.",
             "Встановіть поверх поточної версії або у окрему папку (краще для Alpha).",
-            "Якщо є проблеми — поверніться на Stable за інструкцією Rollback." 
+            "Якщо є проблеми — поверніться на Release за інструкцією Rollback."
           ]
         },
         "rollback": {
-          "title": "Як повернутися на стабільну версію",
+          "title": "Як повернутися на релізну версію",
           "steps": [
             "Видаліть Alpha/Beta через “Програми” (або деінсталятор).",
-            "Завантажте Stable (Build) та встановіть знову.",
-            "Оновіть бази після встановлення та запустіть повне сканування." 
-          ]
-,
-          "items": [
-            "AI Scan — пошук прихованих і невідомих загроз за допомогою ШІ.",
-            "Network Scan — аналіз мережі та підключень.",
-            "Server Scan — перевірка серверів на вразливості.",
-            "Cloud Scan — контроль безпеки хмарних ресурсів."
+            "Завантажте Release та встановіть знову.",
+            "Оновіть бази після встановлення та запустіть повне сканування."
           ]
         }
       }
