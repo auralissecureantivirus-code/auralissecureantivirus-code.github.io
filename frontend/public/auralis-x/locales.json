@@ -291,8 +291,8 @@
           "desc": "Monitor critical files and registry keys with instant alerts and automatic rollback."
         },
         {
-          "title": "Isolated sandbox",
-          "desc": "Launch suspicious apps in a protected environment without risking the main system."
+          "title": "Multi scans",
+          "desc": "Comprehensive security scanning for system, network, servers, and cloud."
         },
         {
           "title": "Data protection",
