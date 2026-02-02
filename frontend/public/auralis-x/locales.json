@@ -122,7 +122,7 @@
           "warning": "Beta обычно стабильнее Alpha, но ошибки всё ещё возможны."
         },
         "stable": {
-          "title": "Build",
+          "title": "Release",
           "status": "Stable",
           "desc": "Рекомендуемая версия для ежедневной защиты.",
           "cta": "Скачать"
@@ -324,7 +324,7 @@
           "warning": "Beta is more stable than Alpha, but issues may still happen."
         },
         "stable": {
-          "title": "Build",
+          "title": "Release",
           "status": "Stable",
           "desc": "Recommended version for everyday protection.",
           "cta": "Download"
@@ -526,7 +526,7 @@
           "warning": "Beta зазвичай стабільніша за Alpha, але проблеми можливі."
         },
         "stable": {
-          "title": "Build",
+          "title": "Release",
           "status": "Stable",
           "desc": "Рекомендована версія для щоденного захисту.",
           "cta": "Завантажити"
