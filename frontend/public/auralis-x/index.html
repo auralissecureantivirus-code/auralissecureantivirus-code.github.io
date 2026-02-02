@@ -67,13 +67,13 @@
         </select>
 
         <div class="theme-switch" role="group" aria-label="Themes" data-testid="theme-switch">
-          <button class="btn theme-btn" data-theme="theme-system" aria-label="System" data-testid="theme-system-button">SYS</button>
-          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark" data-testid="theme-dark-button">DRK</button>
-          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light" data-testid="theme-light-button">LGT</button>
-          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue" data-testid="theme-blue-button">BLU</button>
-          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green" data-testid="theme-green-button">GRN</button>
-          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet" data-testid="theme-violet-button">VLT</button>
-          <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber" data-testid="theme-amber-button">AMB</button>
+          <button class="btn theme-btn" data-theme="theme-system" aria-label="System" data-testid="theme-system-button">🖥</button>
+          <button class="btn theme-btn" data-theme="theme-dark" aria-label="Dark" data-testid="theme-dark-button">🌙</button>
+          <button class="btn theme-btn" data-theme="theme-light" aria-label="Light" data-testid="theme-light-button">☀</button>
+          <button class="btn theme-btn" data-theme="theme-blue" aria-label="Blue" data-testid="theme-blue-button">🔵</button>
+          <button class="btn theme-btn" data-theme="theme-green" aria-label="Green" data-testid="theme-green-button">🟢</button>
+          <button class="btn theme-btn" data-theme="theme-violet" aria-label="Violet" data-testid="theme-violet-button">🟣</button>
+          <button class="btn theme-btn" data-theme="theme-amber" aria-label="Amber" data-testid="theme-amber-button">🟠</button>
         </div>
 
         <select id="langSelect" class="select" aria-label="Select language" data-testid="language-select">
@@ -178,7 +178,7 @@
 
             <div class="console-footer" data-testid="console-footer">
               <span data-i18n="hero.console.signature" data-testid="console-signature-label">Signature base</span>
-              <span data-i18n="hero.console.signatureVersion" data-testid="console-signature-value">v1.4.0 | updated 5 min ago</span>
+              <span data-i18n="hero.console.signatureVersion" data-testid="console-signature-value">v1.5.0 | updated 5 min ago</span>
             </div>
           </div>
         </div>
@@ -215,8 +215,7 @@
               Filter traffic and block phishing with behavioural analytics and self-updating rules.
             </p>
             <div class="metric" data-testid="dashboard-network-metric">
-              <strong data-testid="dashboard-network-metric-value">42</strong>
-              <span data-i18n="dashboard.cards.network.metric" data-testid="dashboard-network-metric-label">Connections monitored</span>
+              <strong data-i18n="dashboard.cards.network.metric" data-testid="dashboard-network-metric-text">All network traffic under control</strong>
             </div>
           </article>
 
@@ -256,10 +255,16 @@
             </p>
           </article>
           <article class="feature-card reveal" data-testid="feature-card-1">
-            <h3 data-i18n="features.cards.1.title" data-testid="feature-1-title">Isolated sandbox</h3>
+            <h3 data-i18n="features.cards.1.title" data-testid="feature-1-title">Multi scans</h3>
             <p data-i18n="features.cards.1.desc" data-testid="feature-1-desc">
-              Launch suspicious apps in a protected environment without risking the main system.
+              Comprehensive security scanning for system, network, servers, and cloud.
             </p>
+            <ul class="feature-list" data-testid="feature-1-list">
+              <li data-i18n="features.cards.1.items.0" data-testid="feature-1-item-0">AI Scan — ...</li>
+              <li data-i18n="features.cards.1.items.1" data-testid="feature-1-item-1">Network Scan — ...</li>
+              <li data-i18n="features.cards.1.items.2" data-testid="feature-1-item-2">Server Scan — ...</li>
+              <li data-i18n="features.cards.1.items.3" data-testid="feature-1-item-3">Cloud Scan — ...</li>
+            </ul>
           </article>
           <article class="feature-card reveal" data-testid="feature-card-2">
             <h3 data-i18n="features.cards.2.title" data-testid="feature-2-title">Data protection</h3>
@@ -296,7 +301,7 @@
               <p class="muted" data-i18n="testing.cards.alpha.desc" data-testid="build-alpha-desc">Experimental features. Unstable and may crash.</p>
             </div>
             <div class="build-actions">
-              <a class="btn btn-soft" href="#" data-i18n="testing.cards.alpha.cta" data-testid="build-alpha-cta">Join testing</a>
+              <a class="btn btn-soft" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-i18n="testing.cards.alpha.cta" data-testid="build-alpha-cta">Download</a>
               <div class="warning" data-i18n="testing.cards.alpha.warning" data-testid="build-alpha-warning">
                 Alpha builds may contain breaking changes. Use on a test machine.
               </div>
@@ -312,7 +317,7 @@
               <p class="muted" data-i18n="testing.cards.beta.desc" data-testid="build-beta-desc">Pre-release testing before stable rollout.</p>
             </div>
             <div class="build-actions">
-              <a class="btn btn-soft" href="#" data-i18n="testing.cards.beta.cta" data-testid="build-beta-cta">Join testing</a>
+              <a class="btn btn-soft" href="https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q" target="_blank" rel="noopener" data-i18n="testing.cards.beta.cta" data-testid="build-beta-cta">Download</a>
               <div class="warning" data-i18n="testing.cards.beta.warning" data-testid="build-beta-warning">
                 Beta builds are more stable than Alpha, but may still have issues.
               </div>
@@ -322,7 +327,7 @@
           <article class="build-card reveal" data-testid="build-card-stable">
             <div class="build-top">
               <div class="build-title-row">
-                <h3 data-i18n="testing.cards.stable.title" data-testid="build-stable-title">Build</h3>
+                <h3 data-i18n="testing.cards.stable.title" data-testid="build-stable-title">Release</h3>
                 <span class="pill pill-stable" data-i18n="testing.cards.stable.status" data-testid="build-stable-status">Stable</span>
               </div>
               <p class="muted" data-i18n="testing.cards.stable.desc" data-testid="build-stable-desc">Recommended version for everyday protection.</p>
@@ -412,7 +417,7 @@
 
           <div class="download-version" data-testid="download-version">
             <span class="label" data-i18n="download.releaseLabel" data-testid="download-release-label">Release version</span>
-            <span class="value" id="releaseTag" data-testid="download-release-value">release 1.4.0</span>
+            <span class="value" id="releaseTag" data-testid="download-release-value">release 1.5.0</span>
           </div>
 
           <div class="cta" data-testid="download-cta">
