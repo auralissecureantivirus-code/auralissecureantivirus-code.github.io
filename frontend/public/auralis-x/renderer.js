@@ -34,6 +34,20 @@ let activeTabId = "overview";
 
 const navMap = new Map();
 
+// Counters
+let countersInitialized = false;
+let countersRunning = false;
+let countersCompleted = false;
+let counterRaf = null;
+
+// Features list i18n (array)
+const FEATURES_ARRAY_MAPPING = [
+  { path: "features.cards.0", nodeTestIds: { title: "feature-0-title", desc: "feature-0-desc" } },
+  { path: "features.cards.1", nodeTestIds: { title: "feature-1-title", desc: "feature-1-desc", itemsPrefix: "feature-1-item-" } },
+  { path: "features.cards.2", nodeTestIds: { title: "feature-2-title", desc: "feature-2-desc" } },
+  { path: "features.cards.3", nodeTestIds: { title: "feature-3-title", desc: "feature-3-desc" } }
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   initYear();
   initSplash();
@@ -65,8 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       applyI18n(currentLang);
       updateThemeButtons(currentTheme);
       setActiveTab(getTabFromHash() || activeTabId, { pushHash: false, skipAnimation: true });
-      // Start counters after i18n has applied possible changes
-      startCounters();
+      startCounters({ restart: true });
     });
 });
 
@@ -99,17 +112,6 @@ function initReleaseTag() {
   const releaseTag = $("#releaseTag");
   if (releaseTag) {
     releaseTag.textContent = `${RELEASE_LABEL_PREFIX}${RELEASE_VERSION}`;
-  }
-
-  const signatureVersion = $("[data-testid=\"console-signature-value\"]");
-  if (signatureVersion) {
-    // Keep the localized text structure but update version token.
-    const raw = signatureVersion.textContent || "";
-    if (raw.includes("v")) {
-      signatureVersion.textContent = raw.replace(/v\d+\.\d+\.\d+/g, `v${RELEASE_VERSION}`);
-    } else {
-      signatureVersion.textContent = `v${RELEASE_VERSION}`;
-    }
   }
 }
 
@@ -234,6 +236,9 @@ function applyI18n(language) {
     }
   });
 
+  // Array-based features content (cards + bullet list)
+  applyFeaturesArrayI18n(dict);
+
   const description = resolveKey(dict, "meta.description");
   const title = resolveKey(dict, "meta.title");
   const titleNode = document.querySelector("title[data-i18n]");
@@ -248,13 +253,38 @@ function applyI18n(language) {
     }
   }
 
-  // Ensure section select stays aligned after language switch.
   const sectionSelect = $("#sectionSelect");
   if (sectionSelect) {
     sectionSelect.value = activeTabId;
   }
 
   updateIpStatusLabel();
+}
+
+function applyFeaturesArrayI18n(dict) {
+  FEATURES_ARRAY_MAPPING.forEach((mapping) => {
+    const base = resolveKey(dict, mapping.path);
+    if (!base) return;
+
+    const titleNode = $(`[data-testid=\"${mapping.nodeTestIds.title}\"]`);
+    const descNode = $(`[data-testid=\"${mapping.nodeTestIds.desc}\"]`);
+
+    if (titleNode && typeof base.title === "string") {
+      titleNode.textContent = base.title;
+    }
+    if (descNode && typeof base.desc === "string") {
+      descNode.textContent = base.desc;
+    }
+
+    if (mapping.nodeTestIds.itemsPrefix && Array.isArray(base.items)) {
+      base.items.forEach((text, idx) => {
+        const itemNode = $(`[data-testid=\"${mapping.nodeTestIds.itemsPrefix}${idx}\"]`);
+        if (itemNode && typeof text === "string") {
+          itemNode.textContent = text;
+        }
+      });
+    }
+  });
 }
 
 function resolveKey(source, path) {
@@ -360,7 +390,6 @@ function setActiveTab(id, options = {}) {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Start counters when coming back to overview
   if (id === "overview") {
     startCounters({ restart: false });
   }
@@ -697,18 +726,18 @@ function attachMediaListener(mediaQuery, handler) {
   }
 }
 
-// --- Requested UX tweaks ---
-
-let countersInitialized = false;
-let countersStarted = false;
-
 function initAnimatedCounters() {
   countersInitialized = true;
 }
 
 function startCounters(options = {}) {
   if (!countersInitialized) return;
-  if (countersStarted && !options.restart) return;
+
+  if (options.restart) {
+    countersCompleted = false;
+  }
+
+  if (countersRunning || countersCompleted) return;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) {
@@ -720,23 +749,31 @@ function startCounters(options = {}) {
 
   const target = Number(node.dataset.target || "100");
   const duration = Number(node.dataset.duration || "650");
-
   const suffix = node.dataset.suffix || "+";
 
-  const startTime = performance.now();
-  countersStarted = true;
+  countersRunning = true;
 
-  function tick(now) {
+  const startTime = performance.now();
+
+  const tick = (now) => {
     const t = Math.min(1, (now - startTime) / duration);
     const eased = 1 - Math.pow(1 - t, 3);
     const value = Math.round(eased * target);
     node.textContent = `${value}${suffix}`;
-    if (t < 1) {
-      requestAnimationFrame(tick);
-    }
-  }
 
-  requestAnimationFrame(tick);
+    if (t < 1) {
+      counterRaf = requestAnimationFrame(tick);
+    } else {
+      countersRunning = false;
+      countersCompleted = true;
+      counterRaf = null;
+    }
+  };
+
+  if (counterRaf) {
+    cancelAnimationFrame(counterRaf);
+  }
+  counterRaf = requestAnimationFrame(tick);
 }
 
 function initScanButtonRedirect() {
