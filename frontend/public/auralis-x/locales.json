@@ -273,7 +273,7 @@
         "network": {
           "title": "Network shield",
           "desc": "Filter traffic and block phishing with behavioural analytics and self-updating rules.",
-          "metric": "Connections monitored"
+          "metric": "All network traffic under control"
         },
         "update": {
           "title": "Update centre",
