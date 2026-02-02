@@ -13,8 +13,9 @@ const THEME_META = {
   "theme-system": ""
 };
 
-const RELEASE_VERSION = "1.4.0";
+const RELEASE_VERSION = "1.5.0";
 const RELEASE_LABEL_PREFIX = "release ";
+const DOWNLOAD_URL = "https://mega.nz/folder/bEsXXKAa#HMylvXhNvKVMD-bn9eGv-Q";
 
 const STORAGE_KEYS = {
   theme: "auralisx_theme",
@@ -45,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initIpPanel();
   initBrowserMonitor();
   initMailLink();
+  initAnimatedCounters();
+  initScanButtonRedirect();
 
   window.addEventListener("load", () => {
     window.requestAnimationFrame(() => {
@@ -62,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
       applyI18n(currentLang);
       updateThemeButtons(currentTheme);
       setActiveTab(getTabFromHash() || activeTabId, { pushHash: false, skipAnimation: true });
+      // Start counters after i18n has applied possible changes
+      startCounters();
     });
 });
 
@@ -94,6 +99,17 @@ function initReleaseTag() {
   const releaseTag = $("#releaseTag");
   if (releaseTag) {
     releaseTag.textContent = `${RELEASE_LABEL_PREFIX}${RELEASE_VERSION}`;
+  }
+
+  const signatureVersion = $("[data-testid=\"console-signature-value\"]");
+  if (signatureVersion) {
+    // Keep the localized text structure but update version token.
+    const raw = signatureVersion.textContent || "";
+    if (raw.includes("v")) {
+      signatureVersion.textContent = raw.replace(/v\d+\.\d+\.\d+/g, `v${RELEASE_VERSION}`);
+    } else {
+      signatureVersion.textContent = `v${RELEASE_VERSION}`;
+    }
   }
 }
 
@@ -183,6 +199,7 @@ function initLanguageSelect() {
     const nextLang = (event.target.value || "").toLowerCase();
     if (SUPPORTED_LANGS.includes(nextLang)) {
       applyI18n(nextLang);
+      startCounters({ restart: true });
     }
   });
 }
@@ -231,7 +248,7 @@ function applyI18n(language) {
     }
   }
 
-  // Ensure section select labels update after language switch.
+  // Ensure section select stays aligned after language switch.
   const sectionSelect = $("#sectionSelect");
   if (sectionSelect) {
     sectionSelect.value = activeTabId;
@@ -314,7 +331,6 @@ function setActiveTab(id, options = {}) {
     }
   }
 
-  // Activate next section
   nextSection.classList.add("is-active");
   nextSection.classList.remove("is-exiting");
 
@@ -336,15 +352,18 @@ function setActiveTab(id, options = {}) {
     forceRevealVisible(nextSection);
   }
 
-  // Reset exit class after animation
   if (currentSection && !skipAnimation) {
     setTimeout(() => {
       currentSection.classList.remove("is-exiting");
     }, 420);
   }
 
-  // Keep navigation feeling like tabs
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Start counters when coming back to overview
+  if (id === "overview") {
+    startCounters({ restart: false });
+  }
 }
 
 function setActiveLink(id) {
@@ -364,7 +383,6 @@ function runSectionReveal(section) {
   const nodes = $$(".reveal", section);
   if (!nodes.length) return;
 
-  // Reset
   nodes.forEach((node) => node.classList.remove("is-visible"));
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -677,4 +695,55 @@ function attachMediaListener(mediaQuery, handler) {
   } else if (typeof mediaQuery.addListener === "function") {
     mediaQuery.addListener(handler);
   }
+}
+
+// --- Requested UX tweaks ---
+
+let countersInitialized = false;
+let countersStarted = false;
+
+function initAnimatedCounters() {
+  countersInitialized = true;
+}
+
+function startCounters(options = {}) {
+  if (!countersInitialized) return;
+  if (countersStarted && !options.restart) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    return;
+  }
+
+  const node = $("#heroThreatCounter");
+  if (!node) return;
+
+  const target = Number(node.dataset.target || "100");
+  const duration = Number(node.dataset.duration || "650");
+
+  const suffix = node.dataset.suffix || "+";
+
+  const startTime = performance.now();
+  countersStarted = true;
+
+  function tick(now) {
+    const t = Math.min(1, (now - startTime) / duration);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const value = Math.round(eased * target);
+    node.textContent = `${value}${suffix}`;
+    if (t < 1) {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+function initScanButtonRedirect() {
+  const scanBtn = $("[data-testid=\"dashboard-scan-button\"]");
+  if (!scanBtn) return;
+
+  scanBtn.addEventListener("click", () => {
+    window.open(DOWNLOAD_URL, "_blank", "noopener");
+  });
 }
