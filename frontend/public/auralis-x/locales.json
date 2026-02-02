@@ -46,7 +46,7 @@
         "threats": "Угроз заблокировано",
         "quarantine": "В карантине",
         "signature": "База подписей",
-        "signatureVersion": "v1.4.0 | обновлено 5 минут назад",
+        "signatureVersion": "v1.5.0 | обновлено 5 минут назад",
         "fps": "Частота обновления",
         "fpsUnit": "fps",
         "memory": "JS-память",
