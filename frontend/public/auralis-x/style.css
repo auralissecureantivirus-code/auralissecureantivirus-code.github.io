@@ -1245,6 +1245,10 @@ a:focus-visible {
 }
 
 .splash-brand .brand-x {
+  font-size: 1.2em;
+}
+
+.splash-brand .brand-x {
   transform: translateY(1px);
 }
 
