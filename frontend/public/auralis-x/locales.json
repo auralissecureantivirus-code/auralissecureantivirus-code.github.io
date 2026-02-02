@@ -376,6 +376,13 @@
             "Update signatures after install and run a full scan." 
           ]
         }
+,
+          "items": [
+            "AI Scan — detect hidden and unknown threats with AI.",
+            "Network Scan — analyse network and connections.",
+            "Server Scan — check servers for vulnerabilities.",
+            "Cloud Scan — monitor cloud resource security."
+          ]
       }
     },
     "download": {
